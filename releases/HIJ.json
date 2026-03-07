@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.1.1",
+      "game_version": ">=1.0.0",
+      "date": "2026-03-07",
+      "changelog": "Contains 呉 (Kure)",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.1/HIJ.zip",
+      "sha256": "0a8100c800c38430209d1eb07e1324f7bb47c2954c5c84a3b473f0563dbe2cdd"
+    },
+    {
       "version": "0.1.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-07",
