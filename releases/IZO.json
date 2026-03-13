@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "version": "0.1.0",
+      "game_version": ">=1.2.0",
+      "date": "2026-03-14",
+      "changelog": "New in 0.2.0",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/IZO.zip",
+      "sha256": "bfb2e32212e23cbe329dd0c5b28934a2f688ff54ec8fa99c7cbf79eb325ecf3c"
+    }
+  ]
+}

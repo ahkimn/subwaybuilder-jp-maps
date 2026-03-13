@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.3.0",
+      "game_version": ">=1.2.0",
+      "date": "2026-03-14",
+      "changelog": "Map pack update.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/OKA.zip",
+      "sha256": "e94d7db5ed41c8a9ee18d10bd8bf4fcd8e69cdc2c2237ccbbb2e9049a92a5af8"
+    },
+    {
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
