@@ -98,4 +98,5 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 # Planned Updates
 
 - Rebalancing of municipality O/D fit to better handle cities/wards with extreme resident/worker imbalance (e.g. designated city centers)
-- Addition of cultural special demand (e.g. museums/libraries/aquariums/etc.) to simulate more leisure travel
+- Cultural special demand (e.g. museums/libraries/aquariums/etc.) to simulate more leisure travel
+- Better post-processing of large buildings files to enable (hopefully) larger maps
