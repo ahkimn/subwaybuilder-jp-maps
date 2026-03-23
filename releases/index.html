@@ -1,169 +1,599 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>subwaybuilder-jp-maps releases</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 24px; line-height: 1.4; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background: #f5f5f5; }
-    code { background: #f2f2f2; padding: 1px 4px; border-radius: 4px; }
-    section { margin-top: 28px; }
-    pre { background: #fafafa; border: 1px solid #ddd; padding: 12px; overflow-x: auto; white-space: pre-wrap; }
-    article.readme { border: 1px solid #e6e6e6; background: #fbfbfb; padding: 14px; border-radius: 6px; }
-    article.readme h1, article.readme h2, article.readme h3, article.readme h4 { margin-top: 1.1em; margin-bottom: 0.5em; }
-    article.readme ul { margin-top: 0.3em; }
-    article.readme img { max-width: 100%; height: auto; display: block; margin: 8px 0; }
-  </style>
-</head>
-<body>
-  <h1>subwaybuilder-jp-maps</h1>
-  <p>A collection of maps of Japanese cities for the game Subway Builder.</p>
-  <table>
-    <thead>
-      <tr>
-        <th>Code</th>
-        <th>Names</th>
-        <th>Manifest</th>
-        <th>Latest Version</th>
-        <th>Date</th>
-        <th>Latest Download</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>FUK</td><td>福岡 (Fukuoka)</td><td><a href="./FUK.json">FUK.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/FUK.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/FUK.zip</a></td></tr><tr><td>GAJ</td><td>山形 (Yamagata)</td><td><a href="./GAJ.json">GAJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/GAJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/GAJ.zip</a></td></tr><tr><td>HIJ</td><td>広島 (Hiroshima)</td><td><a href="./HIJ.json">HIJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HIJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HIJ.zip</a></td></tr><tr><td>HKD</td><td>函館 (Hakodate)</td><td><a href="./HKD.json">HKD.json</a></td><td>0.2.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HKD.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HKD.zip</a></td></tr><tr><td>ITM</td><td>大阪 (Ōsaka)</td><td><a href="./ITM.json">ITM.json</a></td><td>0.1.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/ITM.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/ITM.zip</a></td></tr><tr><td>IZO</td><td>中海 (Nakaumi)</td><td><a href="./IZO.json">IZO.json</a></td><td>0.2.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/IZO.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/IZO.zip</a></td></tr><tr><td>KCZ</td><td>高知 (Kōchi)</td><td><a href="./KCZ.json">KCZ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KCZ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KCZ.zip</a></td></tr><tr><td>KIJ</td><td>新潟 (Niigata)</td><td><a href="./KIJ.json">KIJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KIJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KIJ.zip</a></td></tr><tr><td>KKJ</td><td>北九州 (Kitakyūshū)</td><td><a href="./KKJ.json">KKJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KKJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KKJ.zip</a></td></tr><tr><td>KOJ</td><td>鹿児島 (Kagoshima)</td><td><a href="./KOJ.json">KOJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KOJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KOJ.zip</a></td></tr><tr><td>MYJ</td><td>松山 (Matsuyama)</td><td><a href="./MYJ.json">MYJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/MYJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/MYJ.zip</a></td></tr><tr><td>NGS</td><td>長崎 (Nagasaki)</td><td><a href="./NGS.json">NGS.json</a></td><td>0.2.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/NGS.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/NGS.zip</a></td></tr><tr><td>OKA</td><td>沖縄 (Okinawa)</td><td><a href="./OKA.json">OKA.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKA.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKA.zip</a></td></tr><tr><td>OKJ</td><td>岡山 (Okayama)</td><td><a href="./OKJ.json">OKJ.json</a></td><td>0.1.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKJ.zip</a></td></tr><tr><td>SDJ</td><td>仙台 (Sendai)</td><td><a href="./SDJ.json">SDJ.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SDJ.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SDJ.zip</a></td></tr><tr><td>SPK</td><td>札幌 (Sapporo)</td><td><a href="./SPK.json">SPK.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SPK.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SPK.zip</a></td></tr><tr><td>TAK</td><td>高松 (Takamatsu)</td><td><a href="./TAK.json">TAK.json</a></td><td>0.2.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TAK.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TAK.zip</a></td></tr><tr><td>TOY</td><td>富山 (Toyama)</td><td><a href="./TOY.json">TOY.json</a></td><td>0.2.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TOY.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TOY.zip</a></td></tr><tr><td>UKB</td><td>神戸 (Kōbe)</td><td><a href="./UKB.json">UKB.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKB.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKB.zip</a></td></tr><tr><td>UKY</td><td>京都 (Kyōto)</td><td><a href="./UKY.json">UKY.json</a></td><td>0.4.0</td><td>2026-03-23</td><td><a href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKY.zip">https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKY.zip</a></td></tr>
-    </tbody>
-  </table>
-  <section>
-    <h2>README</h2>
-    <article class="readme">
-<h1>Summary</h1>
-<p>Each map is limited to the metropolitan area (都市圏) around one or more major Japanese cities. Metropolitan area bounds are taken from the 2015 (csis.u-tokyo.ac.jp) 大都市雇用圏 dataset, with updates to ensure present-day administrative borders are honored</p>
-<h2>Features</h2>
-<ul>
-  <li>High level of detail, with sub-250m population placements in dense areas.</li>
-  <li>Spatial realism -- points are assigned in a manner that is aware of water features and mesh-weighted</li>
-  <li>Special demand from several sources is also modeled</li>
-  <li style="margin-left: 1.25em;">Airports (based on annual passenger statistics, split by international and domestic travellers)</li>
-  <li style="margin-left: 1.25em;">Ports (based on annual passenger statistics)</li>
-  <li style="margin-left: 1.25em;">Hospitals (based on reported bed capacity)</li>
-  <li style="margin-left: 1.25em;">Students in primary education (小学校・中学校) (clipped to school districts)</li>
-  <li style="margin-left: 1.25em;">Students in secondary education (高等学校) (sized by overall municipal enrollment)</li>
-  <li style="margin-left: 1.25em;">Students in post-secondary (大学・短期大学) (sized by real enrollment figures)</li>
-  <li>OSRM routing included</li>
-  <li>Building depth is default to -10m, with train-related infrastructure exempt</li>
-</ul>
-<h2>High-Level Methodology</h2>
-<p>Resident + Commuter totals are approximated using employed persons / workers (就業者数・従業者数) counts per (小地域) augmented by 500m (labor) and 250/100m (resident + approximate population) meshes to achieve sub-小地域 level point placement. Population counts by 小地域 are conserved, and point balancing is done through a mesh (population/worker) aware loss function</p>
-<p>Gravity model is augmented by known O/D commute patterns by designated city ward (区) or municipality (市町村) to realistically simulate macro-level commute data in the absence of true O/D pairs</p>
-<h2>Primary Data Sources</h2>
-<ul>
-  <li>令和2年国勢調査 (e-stat.go.jp)</li>
-  <li>令和3年経済センサス (e-stat.go.jp)</li>
-  <li>国土数値情報 (nlftp.mlit.go.jp)</li>
-  <li>大学ポートレート(shigaku.go.jp + niad.ac.jp)</li>
-  <li>学校基本調査 (mext.go.jp)</li>
-</ul>
-<h2>Issues/Questions</h2>
-<p>Please raise an issue on this repository or reach out to me directly on the pack&#x27;s dedicated <a href="https://discord.com/channels/1420846272545296470/1479686112896356605">thread</a> for any issues. Suggestions are greatly appreciated and I will do my best to accommodate requests (so long as they are reasonable).</p>
-<h1>Changelog</h1>
-<h2>0.3.0 (2026-03-22)</h2>
-<h3>New Cities</h3>
-<ul>
-  <li><code>ITM</code> - 大阪 / Ōsaka</li>
-  <li><code>OKJ</code> - 岡山 / Okayama</li>
-</ul>
-<h3>New Features</h3>
-<ul>
-  <li>Added demand for ~110 universities/technical colleges with no matching enrollment data (totalling ~140k students)</li>
-  <li>Added demand for ~70 aquariums / zoos / botanical gardens</li>
-</ul>
-<h3>Other Updates</h3>
-<ul>
-  <li>Rebalanced overall population to be logarithmic mean of (employed persons / workers) for consistency</li>
-  <li style="margin-left: 1.25em;">Most cities should see a ~5-10% increase in total population as a result</li>
-  <li>Rebalanced min/max demand totals for individual points based on overall metropolitan area size</li>
-  <li style="margin-left: 1.25em;">Smaller, less dense metropolitan areas (e.g. 山形・函館・高知) will see greater point density as a result</li>
-  <li style="margin-left: 1.25em;">Larger, already dense metropolitan areas (e.g. 神戸・福岡) should see very little change</li>
-  <li>Point seeding algorithm now takes into account 100m mesh population estimates to avoid placing resident point in areas with no buildings</li>
-  <li style="margin-left: 1.25em;">Most apparent in highly rural areas of the map</li>
-  <li>Added final point/displacement/agglomeration algorithm to reduce very dense point spacing in urban centers</li>
-</ul>
-<h3>Bugfixes</h3>
-<ul>
-  <li>Removed fixed-order origin point assignment in O/D calculation assignment causing significant &quot;skew&quot; in municipality origins for large destination points</li>
-  <li style="margin-left: 1.25em;">This fix also signifcantly reduces the share of municipal O/D misalignment going to the smallest municipalities</li>
-</ul>
-<p><img src="../img/od_municipality.png" alt="updated_o_d_debug" loading="lazy" /></p>
-<h2>0.2.0 (2026-03-15)</h2>
-<h3>New Cities</h3>
-<ul>
-  <li><code>HKD</code> - 函館 / Hakodate</li>
-  <li><code>IZO</code> - 中海 / Nakaumi (出雲 (Izumo)・松江 (Matsue)・米子 (Yonago))</li>
-  <li><code>NGS</code> - 長崎 / Nagasaki</li>
-  <li><code>TAK</code> - 高松 / Takamatsu</li>
-  <li><code>TOY</code> - 富山 / Toyama</li>
-</ul>
-<h3>New Features</h3>
-<ul>
-  <li>Added demand from ports / hospitals</li>
-  <li>Rebalancing patch across all existing special demand types</li>
-  <li style="margin-left: 1.25em;">Airports / Universities / High Schools get significant haircuts on overall demand</li>
-  <li>Added padding around boundary so that there is a larger buffer between coastline and black tiles</li>
-</ul>
-<h3>Bugfixes</h3>
-<ul>
-  <li>Fixed elementary/middle school demand being based (inadvertently) off of municipal class count fallback</li>
-  <li style="margin-left: 1.25em;">Demand now relies on much more accurate estimate based off of 15歳未満 (under-15) totals per municipality</li>
-  <li>Fixed the map for 神戸 (Kobe) missing building depth</li>
-</ul>
-<h2>0.1.3 (2026-03-09)</h2>
-<h3>New Cities</h3>
-<ul>
-  <li><code>KCZ</code> - 高知 / Kōchi</li>
-  <li><code>KIJ</code> - 新潟 / Niigata</li>
-  <li><code>KKJ</code> - 北九州 / Kitakyūshū</li>
-  <li><code>OKA</code> - 沖縄 / Okinawa</li>
-  <li><code>UKY</code> - 京都 / Kyōto</li>
-</ul>
-<h3>New Features</h3>
-<ul>
-  <li>Added neighborhood/city labels.</li>
-</ul>
-<h2>0.1.2 (2026-03-08)</h2>
-<h3>New Features</h3>
-<ul>
-  <li>Added special demand from primary/secondary age students commuting to school.</li>
-</ul>
-<h2>0.1.1 (2026-03-07)</h2>
-<h3>Initial Cities</h3>
-<ul>
-  <li><code>FUK</code> - 福岡 / Fukuoka</li>
-  <li><code>GAJ</code> - 山形 / Yamagata</li>
-  <li><code>HIJ</code> - 広島 / Hiroshima</li>
-  <li><code>KOJ</code> - 鹿児島 / Kagoshima</li>
-  <li><code>MYJ</code> - 松山 / Matsuyama</li>
-  <li><code>SDJ</code> - 仙台 / Sendai</li>
-  <li><code>SPK</code> - 札幌 / Sapporo</li>
-  <li><code>UKB</code> - 神戸 / Kōbe</li>
-</ul>
-<h3>Known Issues</h3>
-<ul>
-  <li>鹿児島 (Kagoshima) has park data encoded within the ocean due to the national park surrounding 桜島 (Sakurajima).</li>
-  <li>広島 (Hiroshima) has an improbably tall building -- OSM error</li>
-  <li>富山 (Toyama) has a very isolated point deep in the mountains -- algorithm quirk</li>
-</ul>
-<h1>Planned Updates</h1>
-<ul>
-  <li>Post-processing of large buildings files to enable (hopefully) larger maps (esp. Nagoya)</li>
-  <li style="margin-left: 1.25em;">Better building foundation depth estimation (based on OSM building size)</li>
-  <li>Reconciliation of 小地域 (small boundary area) job counts vs. 500m job mesh to reduce outliers (e.g. high concentration of workers near a certain set of rice fields)</li>
-  <li>Add demand for other cultural institutions (UNESCO world heritage sites / museums / libraries)</li>
-  <li>Add demand for event venues (particularly stadiums &amp; arenas)</li>
-</ul>
-    </article>
-  </section>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>subwaybuilder-jp-maps releases</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 24px;
+        line-height: 1.4;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background: #f5f5f5;
+      }
+      code {
+        background: #f2f2f2;
+        padding: 1px 4px;
+        border-radius: 4px;
+      }
+      section {
+        margin-top: 28px;
+      }
+      pre {
+        background: #fafafa;
+        border: 1px solid #ddd;
+        padding: 12px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+      }
+      article.readme {
+        border: 1px solid #e6e6e6;
+        background: #fbfbfb;
+        padding: 14px;
+        border-radius: 6px;
+      }
+      article.readme h1,
+      article.readme h2,
+      article.readme h3,
+      article.readme h4 {
+        margin-top: 1.1em;
+        margin-bottom: 0.5em;
+      }
+      article.readme ul {
+        margin-top: 0.3em;
+      }
+      article.readme img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>subwaybuilder-jp-maps</h1>
+    <p>A collection of maps of Japanese cities for the game Subway Builder.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Names</th>
+          <th>Manifest</th>
+          <th>Latest Version</th>
+          <th>Date</th>
+          <th>Latest Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FUK</td>
+          <td>福岡 (Fukuoka)</td>
+          <td><a href="./FUK.json">FUK.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/FUK.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/FUK.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>GAJ</td>
+          <td>山形 (Yamagata)</td>
+          <td><a href="./GAJ.json">GAJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/GAJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/GAJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>HIJ</td>
+          <td>広島 (Hiroshima)</td>
+          <td><a href="./HIJ.json">HIJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HIJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HIJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>HKD</td>
+          <td>函館 (Hakodate)</td>
+          <td><a href="./HKD.json">HKD.json</a></td>
+          <td>0.2.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HKD.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HKD.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>ITM</td>
+          <td>大阪 (Ōsaka)</td>
+          <td><a href="./ITM.json">ITM.json</a></td>
+          <td>0.1.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/ITM.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/ITM.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>IZO</td>
+          <td>中海 (Nakaumi)</td>
+          <td><a href="./IZO.json">IZO.json</a></td>
+          <td>0.2.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/IZO.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/IZO.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>KCZ</td>
+          <td>高知 (Kōchi)</td>
+          <td><a href="./KCZ.json">KCZ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KCZ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KCZ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>KIJ</td>
+          <td>新潟 (Niigata)</td>
+          <td><a href="./KIJ.json">KIJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KIJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KIJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>KKJ</td>
+          <td>北九州 (Kitakyūshū)</td>
+          <td><a href="./KKJ.json">KKJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KKJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KKJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>KOJ</td>
+          <td>鹿児島 (Kagoshima)</td>
+          <td><a href="./KOJ.json">KOJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KOJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KOJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>MYJ</td>
+          <td>松山 (Matsuyama)</td>
+          <td><a href="./MYJ.json">MYJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/MYJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/MYJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>NGS</td>
+          <td>長崎 (Nagasaki)</td>
+          <td><a href="./NGS.json">NGS.json</a></td>
+          <td>0.2.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/NGS.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/NGS.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>OKA</td>
+          <td>沖縄 (Okinawa)</td>
+          <td><a href="./OKA.json">OKA.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKA.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKA.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>OKJ</td>
+          <td>岡山 (Okayama)</td>
+          <td><a href="./OKJ.json">OKJ.json</a></td>
+          <td>0.1.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>SDJ</td>
+          <td>仙台 (Sendai)</td>
+          <td><a href="./SDJ.json">SDJ.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SDJ.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SDJ.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>SPK</td>
+          <td>札幌 (Sapporo)</td>
+          <td><a href="./SPK.json">SPK.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SPK.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SPK.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>TAK</td>
+          <td>高松 (Takamatsu)</td>
+          <td><a href="./TAK.json">TAK.json</a></td>
+          <td>0.2.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TAK.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TAK.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>TOY</td>
+          <td>富山 (Toyama)</td>
+          <td><a href="./TOY.json">TOY.json</a></td>
+          <td>0.2.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TOY.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/TOY.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>UKB</td>
+          <td>神戸 (Kōbe)</td>
+          <td><a href="./UKB.json">UKB.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKB.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKB.zip</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>UKY</td>
+          <td>京都 (Kyōto)</td>
+          <td><a href="./UKY.json">UKY.json</a></td>
+          <td>0.4.0</td>
+          <td>2026-03-23</td>
+          <td>
+            <a
+              href="https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKY.zip"
+              >https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKY.zip</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <section>
+      <article class="readme">
+        <h1>Summary</h1>
+        <p>
+          Each map is limited to the metropolitan area (都市圏) around one or
+          more major Japanese cities. Metropolitan area bounds are taken from
+          the 2015 (csis.u-tokyo.ac.jp) 大都市雇用圏 dataset, with updates to
+          ensure present-day administrative borders are honored
+        </p>
+        <h2>Features</h2>
+        <ul>
+          <li>
+            High level of detail, with sub-250m population placements in dense
+            areas.
+          </li>
+          <li>
+            Spatial realism -- points are assigned in a manner that is aware of
+            water features and mesh-weighted
+          </li>
+          <li>Special demand from several sources is also modeled</li>
+          <li style="margin-left: 1.25em">
+            Airports (based on annual passenger statistics, split by
+            international and domestic travellers)
+          </li>
+          <li style="margin-left: 1.25em">
+            Ports (based on annual passenger statistics)
+          </li>
+          <li style="margin-left: 1.25em">
+            Hospitals (based on reported bed capacity)
+          </li>
+          <li style="margin-left: 1.25em">
+            Students in primary education (小学校・中学校) (clipped to school
+            districts)
+          </li>
+          <li style="margin-left: 1.25em">
+            Students in secondary education (高等学校) (sized by overall
+            municipal enrollment)
+          </li>
+          <li style="margin-left: 1.25em">
+            Students in post-secondary (大学・短期大学) (sized by real
+            enrollment figures)
+          </li>
+          <li>OSRM routing included</li>
+          <li>
+            Building depth is default to -10m, with train-related infrastructure
+            exempt
+          </li>
+        </ul>
+        <h2>High-Level Methodology</h2>
+        <p>
+          Resident + Commuter totals are approximated using employed persons /
+          workers (就業者数・従業者数) counts per (小地域) augmented by 500m
+          (labor) and 250/100m (resident + approximate population) meshes to
+          achieve sub-小地域 level point placement. Population counts by 小地域
+          are conserved, and point balancing is done through a mesh
+          (population/worker) aware loss function
+        </p>
+        <p>
+          Gravity model is augmented by known O/D commute patterns by designated
+          city ward (区) or municipality (市町村) to realistically simulate
+          macro-level commute data in the absence of true O/D pairs
+        </p>
+        <h2>Primary Data Sources</h2>
+        <ul>
+          <li>令和2年国勢調査 (e-stat.go.jp)</li>
+          <li>令和3年経済センサス (e-stat.go.jp)</li>
+          <li>国土数値情報 (nlftp.mlit.go.jp)</li>
+          <li>大学ポートレート(shigaku.go.jp + niad.ac.jp)</li>
+          <li>学校基本調査 (mext.go.jp)</li>
+        </ul>
+        <h2>Issues/Questions</h2>
+        <p>
+          Please raise an issue on this repository or reach out to me directly
+          on the pack&#x27;s dedicated
+          <a
+            href="https://discord.com/channels/1420846272545296470/1479686112896356605"
+            >thread</a
+          >
+          for any issues. Suggestions are greatly appreciated and I will do my
+          best to accommodate requests (so long as they are reasonable).
+        </p>
+        <h1>Changelog</h1>
+        <h2>0.3.0 (2026-03-22)</h2>
+        <h3>New Cities</h3>
+        <ul>
+          <li><code>ITM</code> - 大阪 / Ōsaka</li>
+          <li><code>OKJ</code> - 岡山 / Okayama</li>
+        </ul>
+        <h3>New Features</h3>
+        <ul>
+          <li>
+            Added demand for ~110 universities/technical colleges with no
+            matching enrollment data (totalling ~140k students)
+          </li>
+          <li>Added demand for ~70 aquariums / zoos / botanical gardens</li>
+        </ul>
+        <h3>Other Updates</h3>
+        <ul>
+          <li>
+            Rebalanced overall population to be logarithmic mean of (employed
+            persons / workers) for consistency
+          </li>
+          <li style="margin-left: 1.25em">
+            Most cities should see a ~5-10% increase in total population as a
+            result
+          </li>
+          <li>
+            Rebalanced min/max demand totals for individual points based on
+            overall metropolitan area size
+          </li>
+          <li style="margin-left: 1.25em">
+            Smaller, less dense metropolitan areas (e.g. 山形・函館・高知) will
+            see greater point density as a result
+          </li>
+          <li style="margin-left: 1.25em">
+            Larger, already dense metropolitan areas (e.g. 神戸・福岡) should
+            see very little change
+          </li>
+          <li>
+            Point seeding algorithm now takes into account 100m mesh population
+            estimates to avoid placing resident point in areas with no buildings
+          </li>
+          <li style="margin-left: 1.25em">
+            Most apparent in highly rural areas of the map
+          </li>
+          <li>
+            Added final point/displacement/agglomeration algorithm to reduce
+            very dense point spacing in urban centers
+          </li>
+        </ul>
+        <h3>Bugfixes</h3>
+        <ul>
+          <li>
+            Removed fixed-order origin point assignment in O/D calculation
+            assignment causing significant &quot;skew&quot; in municipality
+            origins for large destination points
+          </li>
+          <li style="margin-left: 1.25em">
+            This fix also signifcantly reduces the share of municipal O/D
+            misalignment going to the smallest municipalities
+          </li>
+        </ul>
+        <p>
+          <img
+            src="../img/od_municipality.png"
+            alt="updated_o_d_debug"
+            loading="lazy"
+          />
+        </p>
+        <h2>0.2.0 (2026-03-15)</h2>
+        <h3>New Cities</h3>
+        <ul>
+          <li><code>HKD</code> - 函館 / Hakodate</li>
+          <li>
+            <code>IZO</code> - 中海 / Nakaumi (出雲 (Izumo)・松江 (Matsue)・米子
+            (Yonago))
+          </li>
+          <li><code>NGS</code> - 長崎 / Nagasaki</li>
+          <li><code>TAK</code> - 高松 / Takamatsu</li>
+          <li><code>TOY</code> - 富山 / Toyama</li>
+        </ul>
+        <h3>New Features</h3>
+        <ul>
+          <li>Added demand from ports / hospitals</li>
+          <li>Rebalancing patch across all existing special demand types</li>
+          <li style="margin-left: 1.25em">
+            Airports / Universities / High Schools get significant haircuts on
+            overall demand
+          </li>
+          <li>
+            Added padding around boundary so that there is a larger buffer
+            between coastline and black tiles
+          </li>
+        </ul>
+        <h3>Bugfixes</h3>
+        <ul>
+          <li>
+            Fixed elementary/middle school demand being based (inadvertently)
+            off of municipal class count fallback
+          </li>
+          <li style="margin-left: 1.25em">
+            Demand now relies on much more accurate estimate based off of
+            15歳未満 (under-15) totals per municipality
+          </li>
+          <li>Fixed the map for 神戸 (Kobe) missing building depth</li>
+        </ul>
+        <h2>0.1.3 (2026-03-09)</h2>
+        <h3>New Cities</h3>
+        <ul>
+          <li><code>KCZ</code> - 高知 / Kōchi</li>
+          <li><code>KIJ</code> - 新潟 / Niigata</li>
+          <li><code>KKJ</code> - 北九州 / Kitakyūshū</li>
+          <li><code>OKA</code> - 沖縄 / Okinawa</li>
+          <li><code>UKY</code> - 京都 / Kyōto</li>
+        </ul>
+        <h3>New Features</h3>
+        <ul>
+          <li>Added neighborhood/city labels.</li>
+        </ul>
+        <h2>0.1.2 (2026-03-08)</h2>
+        <h3>New Features</h3>
+        <ul>
+          <li>
+            Added special demand from primary/secondary age students commuting
+            to school.
+          </li>
+        </ul>
+        <h2>0.1.1 (2026-03-07)</h2>
+        <h3>Initial Cities</h3>
+        <ul>
+          <li><code>FUK</code> - 福岡 / Fukuoka</li>
+          <li><code>GAJ</code> - 山形 / Yamagata</li>
+          <li><code>HIJ</code> - 広島 / Hiroshima</li>
+          <li><code>KOJ</code> - 鹿児島 / Kagoshima</li>
+          <li><code>MYJ</code> - 松山 / Matsuyama</li>
+          <li><code>SDJ</code> - 仙台 / Sendai</li>
+          <li><code>SPK</code> - 札幌 / Sapporo</li>
+          <li><code>UKB</code> - 神戸 / Kōbe</li>
+        </ul>
+        <h3>Known Issues</h3>
+        <ul>
+          <li>
+            鹿児島 (Kagoshima) has park data encoded within the ocean due to the
+            national park surrounding 桜島 (Sakurajima).
+          </li>
+          <li>広島 (Hiroshima) has an improbably tall building -- OSM error</li>
+          <li>
+            富山 (Toyama) has a very isolated point deep in the mountains --
+            algorithm quirk
+          </li>
+        </ul>
+        <h1>Planned Updates</h1>
+        <ul>
+          <li>
+            Post-processing of large buildings files to enable (hopefully)
+            larger maps (esp. Nagoya)
+          </li>
+          <li style="margin-left: 1.25em">
+            Better building foundation depth estimation (based on OSM building
+            size)
+          </li>
+          <li>
+            Reconciliation of 小地域 (small boundary area) job counts vs. 500m
+            job mesh to reduce outliers (e.g. high concentration of workers near
+            a certain set of rice fields)
+          </li>
+          <li>
+            Add demand for other cultural institutions (UNESCO world heritage
+            sites / museums / libraries)
+          </li>
+          <li>
+            Add demand for event venues (particularly stadiums &amp; arenas)
+          </li>
+        </ul>
+      </article>
+    </section>
+  </body>
 </html>
