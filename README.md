@@ -37,6 +37,17 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Changelog
 
+## 0.3.1 (2026-03-25)
+
+### New Features
+
+- Buildings index for 大阪 / Ōsaka significantly reduced to improve playability / renderer OOM crashes.
+  - Renderer now crashes with exit code `0x8B1D` which suggests playing the map with GPU rasterization off will help improve stability
+
+### Other Updates
+
+- Updating building processing filter to more aggressively prune small buildings with multiple polygons
+
 ## 0.3.0 (2026-03-22)
 
 ### New Cities

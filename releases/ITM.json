@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.1.1",
+      "game_version": ">=1.2.0",
+      "date": "2026-03-26",
+      "changelog": "Reduced buildings index size",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.1/ITM.zip",
+      "sha256": "896ec40f84f60bffb626fab97ac6e715617c543f934823189377cb60743f83a9"
+    },
+    {
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
