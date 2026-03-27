@@ -37,6 +37,17 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Changelog
 
+## 0.3.2 (2026-03-27)
+
+### New Cities
+
+- `NGO` - 名古屋 / Nagoya
+
+### Other Updates
+
+- Demand data post-processing made more aggressive (reducing precision to reduce overall data size).
+  - As a result 大阪 / Ōsaka should also be even less demanding on the game.
+
 ## 0.3.1 (2026-03-25)
 
 ### New Features

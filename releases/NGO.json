@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "version": "0.1.4",
+      "game_version": ">=1.2.0",
+      "date": "2026-03-27",
+      "changelog": "New in 0.3.2",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.2/NGO.zip",
+      "sha256": "0c46cd138d53b4432d905691bd378d289001f429c31b1844b83373b6c6b49c3d"
+    }
+  ]
+}
