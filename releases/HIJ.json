@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.5.0",
+      "game_version": ">=1.2.0",
+      "date": "2026-04-05",
+      "changelog": "Expanded to include 東広島・岩国 (Higashihiroshima & Iwakuni) as well as bathymetric data and cultural attraction special demand",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.3/HIJ.zip",
+      "sha256": "a204ba5bc0e851295b0ff5e09e4560cd5697d0337b89c62d11745ff42e64476d"
+    },
+    {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",

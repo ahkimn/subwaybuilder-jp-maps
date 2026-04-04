@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "version": "0.1.0",
+      "game_version": ">=1.2.0",
+      "date": "2026-04-05",
+      "changelog": "New in 0.3.3. Includes bathymetric data and cultural attraction special demand",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.3/AOJ.zip",
+      "sha256": "e39d3b5ceaf856d9f32e585c8046bbbe9b72ae584fc1c22ee2c17f98ed11c295"
+    }
+  ]
+}

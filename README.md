@@ -7,12 +7,22 @@ Each map is limited to the metropolitan area (都市圏) around one or more majo
 - High level of detail, with sub-250m population placements in dense areas.
 - Spatial realism -- points are assigned in a manner that is aware of water features and mesh-weighted
 - Special demand from several sources is also modeled
-  - Airports (based on annual passenger statistics, split by international and domestic travellers)
-  - Ports (based on annual passenger statistics)
-  - Hospitals (based on reported bed capacity)
-  - Students in primary education (小学校・中学校) (clipped to school districts)
-  - Students in secondary education (高等学校) (sized by overall municipal enrollment)
-  - Students in post-secondary (大学・短期大学) (sized by real enrollment figures)
+  - **Airports**
+    - Demand based on annualized passenger statistics, split by international & national travelers
+  - **Ports**
+    - Demand based on annualized passenger statistics
+  - **Hospitals**
+    - Demand based on heuristic of reported bed capacity and known prefectural inpatient bed usage and outpatient visitation rates
+  - **Institutions of Learning**
+    - Students in primary education (小学校・中学校) (clipped to school districts)
+    - Students in secondary education (高等学校) (sized by overall municipal enrollment)
+    - Students in post-secondary (大学・短期大学) (sized by real enrollment figures)
+  - **Cultural Attractions**
+    - Attendance figures + candidate institutions sourced from prefectural/municipal reports (e.g. [山口県の宿泊者及び観光客の動向](https://www.pref.yamaguchi.lg.jp/uploaded/life/217842_497518_misc.pdf))
+    - Zoos / Botanical Gardens / Aquariums (動物園・植物園・水族館)
+    - Art & History Museums (美術館・博物館)
+    - Parks / Sports Facilities / Stadiums (公園・運動公園・総合運動公園・スタジアム・競技場)
+    - Major shrines/temples + landmarks (神社・寺・世界遺産・国宝)
 - OSRM routing included
 - Building depth is default to -10m, with train-related infrastructure exempt
 
@@ -29,6 +39,8 @@ Gravity model is augmented by known O/D commute patterns by designated city ward
 - 国土数値情報 (nlftp.mlit.go.jp)
 - 大学ポートレート(shigaku.go.jp + niad.ac.jp)
 - 学校基本調査 (mext.go.jp)
+- 観光統計 (statistics.jnto.go.jp)
+- 「海しるAPI」 (portal.msil.go.jp) | J-EGG500 (jodc.go.jp)
 
 ## Issues/Questions
 
@@ -36,6 +48,37 @@ Please raise an issue on this repository or reach out to me directly on the pack
 Suggestions are greatly appreciated and I will do my best to accommodate requests (so long as they are reasonable).
 
 # Changelog
+
+## 0.3.3 (2026-03-27)
+
+### New Cities
+
+- `AKJ` - 旭川 / Asahikawa
+- `AOJ` - 津軽 / Tsugaru (青森(Aomori)・弘前(Hirosaki))
+- `FKS` - 中通り / Nakadōri (福島(Fukushima)・郡山(Kōriyama))
+- `FSZ` - 静岡・浜松 / Shizuoka・Hamamatsu
+
+### Reworks
+
+- `HIJ` - 広島 expanded to include 東広島・岩国 (Higashihiroshima + Iwakuni)
+
+### New Features
+
+- Added demand from custom attractions (e.g. major parks, sports venues, cultural icons)
+  - Primarily sourced from prefectural / municipal documents related to annual reports/national censuses
+- Added bathymetric data from J-EGG500 + MSIL to add ocean foundations layers for new and reworked maps
+
+### Other Updates
+
+- Added reconciliation of 小地域 (small boundary area) job counts vs. 500m job mesh to reduce outliers (e.g. high concentration of workers near a certain set of rice fields)
+  - Will be applied to all new maps + reworks moving forward
+
+### Images
+
+**Bathymetric Data**
+![bathymetric_data](img/bathymetric_data.png)
+**Custom Attractions**
+![custom_attractions](img/custom_attractions.png)
 
 ## 0.3.2 (2026-03-27)
 
@@ -87,6 +130,9 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - Removed fixed-order origin point assignment in O/D calculation assignment causing significant "skew" in municipality origins for large destination points
   - This fix also signifcantly reduces the share of municipal O/D misalignment going to the smallest municipalities
 
+### Images
+
+**Municipal O/D Diagram**
 ![updated_o_d_debug](img/od_municipality.png)
 
 ## 0.2.0 (2026-03-15)
@@ -153,8 +199,5 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Planned Updates
 
-- Post-processing of large buildings files to enable (hopefully) larger maps (esp. Nagoya)
-  - Better building foundation depth estimation (based on OSM building size)
-- Reconciliation of 小地域 (small boundary area) job counts vs. 500m job mesh to reduce outliers (e.g. high concentration of workers near a certain set of rice fields)
-- Add demand for other cultural institutions (UNESCO world heritage sites / museums / libraries)
-- Add demand for event venues (particularly stadiums & arenas)
+- Continue reworking older maps to include new content (attractions, bathymetry, etc.)
+- Additional cities not yet covered!
