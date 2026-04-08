@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.1.5",
+      "game_version": "1.2.0",
+      "date": "2026-04-08",
+      "changelog": "Added ocean index for bathymetry and updated buildings / neighborhood labels",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.4/NGO.zip",
+      "sha256": "0a5d1b221deb4038ab57961983c55df47bb6a1e80f6e64254bc4955679b7f8eb"
+    },
+    {
       "version": "0.1.4",
       "game_version": ">=1.2.0",
       "date": "2026-03-27",

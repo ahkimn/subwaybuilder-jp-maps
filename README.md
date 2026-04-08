@@ -49,7 +49,18 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Changelog
 
-## 0.3.3 (2026-03-27)
+## 0.3.4 (2026-04-05)
+
+### New Features
+
+- Switched to Overture for buildings generation
+- Added per-tile building / water stitching to .pmtiles so that rendering becomes much less taxing at lower zoom
+
+### Other Updates
+
+- 名古屋 (Nagoya) and 大阪 (Ōsaka) updated to test new optimizations
+
+## 0.3.3 (2026-04-05)
 
 ### New Cities
 
