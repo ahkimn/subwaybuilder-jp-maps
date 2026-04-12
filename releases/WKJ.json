@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "version": "0.1.0",
+      "game_version": ">=1.2.0",
+      "date": "2026-04-13",
+      "changelog": "Test Map",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.5/WKJ.zip",
+      "sha256": "45fef99c4e87d40a79377485863abdb06cfcb62ca5867014dcdcd39ee1c75222"
+    }
+  ]
+}

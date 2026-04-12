@@ -49,7 +49,16 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Changelog
 
-## 0.3.4 (2026-04-05)
+## 0.3.5 (2026-04-12)
+
+### New Cities (for testing only)
+
+- `SHB` - 根室 / Nemuro
+- `WKJ` - 稚内 / Wakkanai
+
+### Other Updates
+
+## 0.3.4 (2026-04-08)
 
 ### New Features
 
