@@ -49,6 +49,41 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Changelog
 
+## 0.3.6 (2026-04-12)
+
+### New Cities
+
+- `FOKK` - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))
+- `HNA` - 盛岡 / Morioka
+- `KMJ` - 熊本 / Kumamoto
+- `TTJ` - 鳥取 / Tottori
+
+### Major Map Updates
+
+- `FUK` - 福岡 (Fukuoka)
+- `HKD` - 函館 (Hakodate)
+- `KKJ` - 北九州 (Kitakyūshū)
+- `IZO` - 中海 (Nakaumi)
+
+### Minor Map Updates
+
+- `AKJ` - 旭川 (Asahikawa)
+- `AOJ` - 津軽 (Tsugaru)
+- `FKS` - 中通り / Nakadōri
+
+### New Features
+
+- All updated maps received new bathymetric data from J-EGG500 + MSIL as well as neighborhood labels + Overture sourced buildings
+  - Four existing older maps (FUK, HKD, KKJ, IZO) received significant reworks to include attractions-based demand (~3-10% of total demand)
+  - Three existing newer maps (AKJ, AOJ, FKS) received minor updates as they already had attractions-based demand included, but received new bathymetric data and Overture sourced buildings
+- Added distance / city-scale aware driving time penalty to OSRM routing to make it less optimistic
+- Standardized research process for determining attraction demand (e.g. attendance figures / municipal or prefectural reports) to be applied across all maps moving forward
+
+### Other Updates
+
+- Integrated repository with future standardized special demand tagging format
+- Added map description template (now standard for all `registry` maps) along with preview images
+
 ## 0.3.5 (2026-04-12)
 
 ### New Cities (for testing only)
@@ -80,7 +115,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 ### Reworks
 
-- `HIJ` - 広島 expanded to include 東広島・岩国 (Higashihiroshima + Iwakuni)
+- `HIJ` - 広島 (Hiroshima) expanded to include 東広島・岩国 (Higashihiroshima + Iwakuni)
 
 ### New Features
 

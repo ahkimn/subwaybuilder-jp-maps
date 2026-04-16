@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.3.0",
+      "game_version": ">=1.3.0",
+      "date": "2026-04-16",
+      "changelog": "Added ocean bathymetry, bilingual neighborhood labels, and custom attractions",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/IZO.zip",
+      "sha256": "cf8c28d7db20b484a4b0b4db3e54fd248a1869af89fa04a3afc217723dd75ec5"
+    },
+    {
       "version": "0.2.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",

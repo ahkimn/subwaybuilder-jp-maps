@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.5.0",
+      "game_version": ">=1.3.0",
+      "date": "2026-04-16",
+      "changelog": "Added ocean bathymetry, bilingual neighborhood labels, and custom attractions",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/KKJ.zip",
+      "sha256": "e27f22fa76326ef2ee8aaabea53978836187890cab303d18e97564c075b2fca8"
+    },
+    {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
