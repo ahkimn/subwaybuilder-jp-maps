@@ -53,7 +53,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 ### Major Map Updates
 
-- `ITM` - 大阪 / Ōsaka ()
+- `ITM` - 大阪 / Ōsaka
 
 ### Minor Map Updates
 
