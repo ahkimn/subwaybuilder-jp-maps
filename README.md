@@ -49,6 +49,29 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 # Changelog
 
+## 0.3.8 (2026-04-20)
+
+### Major Map Updates
+
+- `ITM` - 大阪 / Ōsaka ()
+
+### Minor Map Updates
+
+- `FOKK` - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))
+- `FUK` - 福岡 (Fukuoka)
+- `KKJ` - 北九州 (Kitakyūshū)
+
+### New Features
+
+- Military base personnel are now modeled, with personnel counts estimated from unit composition per base/garrison
+- ITM updated to have full special demand coverage (~300 additional points), better points seeding, as well as performance optimization through building aggregation
+- FOKK/FUK/KKJ maps updated with better points seeding from 0.3.7 and a modest number of additional special demand sources
+
+**Cross 町丁 repulsion for Ōsaka**
+
+![Ōsaka before seeding change](img/osaka_before.png)
+![Ōsaka after seeding change](img/osaka_after.png)
+
 ## 0.3.7 (2026-04-17)
 
 ### Major Map Updates
@@ -66,7 +89,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
   - Bathymetric data from J-EGG500 + MSIL as well
   - Neighborhood labels
   - Overture sourced buildings
-- SPK (札幌) updated to extend southeast to 苫小牧 (Tomakomai) as well as northeast to 岩見沢 (Iwamizawa)
+- SPK updated to extend southeast to 苫小牧 (Tomakomai) as well as northeast to 岩見沢 (Iwamizawa)
 - Initial point seeding is made aware of cross-町丁 points
   - Additional point repulsion pass added at this part of the pipeline which should reduce crowding in dense areas (e.g. 福岡 (Fukuoka) center)
 - Point seeding is also aware of elongated 町丁 shapes.
