@@ -23,6 +23,8 @@ Each map is limited to the metropolitan area (都市圏) around one or more majo
     - Art & History Museums (美術館・博物館)
     - Parks / Sports Facilities / Stadiums (公園・運動公園・総合運動公園・スタジアム・競技場)
     - Major shrines/temples + landmarks (神社・寺・世界遺産・国宝)
+  - **Military Bases**
+    - Personnel modeled from unit composition per garrison/base
 - OSRM routing included
 - Building depth is default to -10m, with train-related infrastructure exempt
 
@@ -41,22 +43,29 @@ Gravity model is augmented by known O/D commute patterns by designated city ward
 - 学校基本調査 (mext.go.jp)
 - 観光統計 (statistics.jnto.go.jp)
 - 「海しるAPI」 (portal.msil.go.jp) | J-EGG500 (jodc.go.jp)
+- Overture Maps 建物データ (overturemaps.org)
+- Global Building Atlas LoD1 — 建物高さ (huggingface.co/datasets/zhu-xlab)
+- 令和6年医療施設（動態）調査 (mhlw.go.jp)
+- OpenStreetMap — 道路ネットワーク (openstreetmap.org)
 
 ## Issues/Questions
 
 Please raise an issue on this repository or reach out to me directly on the pack's dedicated [thread](https://discord.com/channels/1420846272545296470/1479686112896356605) for any issues.
 Suggestions are greatly appreciated and I will do my best to accommodate requests (so long as they are reasonable).
 
+## Known Issues
+
+- 鹿児島 (Kagoshima) has park data encoded within the ocean due to the national park surrounding 桜島 (Sakurajima).
+- 広島 (Hiroshima) has an improbably tall building -- OSM error
+- 富山 (Toyama) has a very isolated point deep in the mountains -- algorithm quirk
+
 # Changelog
 
 ## 0.3.8 (2026-04-20)
 
-### Major Map Updates
+### Updated Cities
 
 - `ITM` - 大阪 / Ōsaka
-
-### Minor Map Updates
-
 - `FOKK` - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))
 - `FUK` - 福岡 (Fukuoka)
 - `KKJ` - 北九州 (Kitakyūshū)
@@ -74,7 +83,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 ## 0.3.7 (2026-04-17)
 
-### Major Map Updates
+### Updated Cities
 
 - `KCZ` - 高知 (Kōchi)
 - `MYJ` - 松山 (Matsuyama)
@@ -96,7 +105,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
   - 町丁 with high aspect ratios are now force seeded with multiple points so that individual points do not represent extreme spatial distance
 - On larger maps, building collision boxes are now `amalgamated` to reduce index size without incurring huge losses in coverage
 
-### Other Updates
+### Other Features
 
 - Fixed designated city ward mapping to be consistent with other municipal labels (e.g. 神戸市中央区|Kōbeshichūōku => 中央区｜Chūō-Ku)
 
@@ -112,8 +121,6 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 ![alt text](img/elongated_chocho_after.png)
 
-# Changelog
-
 ## 0.3.6 (2026-04-16)
 
 ### New Cities
@@ -123,15 +130,12 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - `KMJ` - 熊本 / Kumamoto
 - `TTJ` - 鳥取 / Tottori
 
-### Major Map Updates
+### Updated Cities
 
 - `FUK` - 福岡 (Fukuoka)
 - `HKD` - 函館 (Hakodate)
 - `KKJ` - 北九州 (Kitakyūshū)
 - `IZO` - 中海 (Nakaumi)
-
-### Minor Map Updates
-
 - `AKJ` - 旭川 (Asahikawa)
 - `AOJ` - 津軽 (Tsugaru)
 - `FKS` - 中通り / Nakadōri
@@ -146,7 +150,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - Added distance / city-scale aware driving time penalty to OSRM routing to make it less optimistic
 - Standardized research process for determining attraction demand (e.g. attendance figures / municipal or prefectural reports) to be applied across all maps moving forward
 
-### Other Updates
+### Other Features
 
 - Integrated repository with future standardized special demand tagging format
 - Added map description template (now standard for all `registry` maps) along with preview images
@@ -158,7 +162,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - `SHB` - 根室 / Nemuro
 - `WKJ` - 稚内 / Wakkanai
 
-### Other Updates
+### Other Features
 
 ## 0.3.4 (2026-04-08)
 
@@ -167,7 +171,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - Switched to Overture for buildings generation
 - Added per-tile building / water stitching to .pmtiles so that rendering becomes much less taxing at lower zoom
 
-### Other Updates
+### Other Features
 
 - 名古屋 (Nagoya) and 大阪 (Ōsaka) updated to test new optimizations
 
@@ -180,7 +184,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - `FKS` - 中通り / Nakadōri (福島(Fukushima)・郡山(Kōriyama))
 - `FSZ` - 静岡・浜松 / Shizuoka・Hamamatsu
 
-### Reworks
+### Updated Cities
 
 - `HIJ` - 広島 (Hiroshima) expanded to include 東広島・岩国 (Higashihiroshima + Iwakuni)
 
@@ -190,7 +194,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
   - Primarily sourced from prefectural / municipal documents related to annual reports/national censuses
 - Added bathymetric data from J-EGG500 + MSIL to add ocean foundations layers for new and reworked maps
 
-### Other Updates
+### Other Features
 
 - Added reconciliation of 小地域 (small boundary area) job counts vs. 500m job mesh to reduce outliers (e.g. high concentration of workers near a certain set of rice fields)
   - Will be applied to all new maps + reworks moving forward
@@ -208,7 +212,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 - `NGO` - 名古屋 / Nagoya
 
-### Other Updates
+### Other Features
 
 - Demand data post-processing made more aggressive (reducing precision to reduce overall data size).
   - As a result 大阪 / Ōsaka should also be even less demanding on the game.
@@ -220,7 +224,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - Buildings index for 大阪 / Ōsaka significantly reduced to improve playability / renderer OOM crashes.
   - Renderer now crashes with exit code `0x8B1D` which suggests playing the map with GPU rasterization off will help improve stability
 
-### Other Updates
+### Other Features
 
 - Updating building processing filter to more aggressively prune small buildings with multiple polygons
 
@@ -236,7 +240,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - Added demand for ~110 universities/technical colleges with no matching enrollment data (totalling ~140k students)
 - Added demand for ~70 aquariums / zoos / botanical gardens
 
-### Other Updates
+### Other Features
 
 - Rebalanced overall population to be logarithmic mean of (employed persons / workers) for consistency
   - Most cities should see a ~5-10% increase in total population as a result
@@ -312,12 +316,6 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - `SDJ` - 仙台 / Sendai
 - `SPK` - 札幌 / Sapporo
 - `UKB` - 神戸 / Kōbe
-
-### Known Issues
-
-- 鹿児島 (Kagoshima) has park data encoded within the ocean due to the national park surrounding 桜島 (Sakurajima).
-- 広島 (Hiroshima) has an improbably tall building -- OSM error
-- 富山 (Toyama) has a very isolated point deep in the mountains -- algorithm quirk
 
 # Planned Updates
 
