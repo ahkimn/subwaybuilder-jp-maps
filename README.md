@@ -67,8 +67,8 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### Updated Cities
 
-- `ITM` - 大阪 / Ōsaka
-- `FOKK` - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))
+- `ITM` - 大阪 (Ōsaka)
+- `FOKK` - 福北 (Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū)))
 - `FUK` - 福岡 (Fukuoka)
 - `KKJ` - 北九州 (Kitakyūshū)
 
@@ -127,10 +127,10 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities
 
-- `FOKK` - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))
-- `HNA` - 盛岡 / Morioka
-- `KMJ` - 熊本 / Kumamoto
-- `TTJ` - 鳥取 / Tottori
+- `FOKK` - 福北 (Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū)))
+- `HNA` - 盛岡 (Morioka)
+- `KMJ` - 熊本 (Kumamoto)
+- `TTJ` - 鳥取 (Tottori)
 
 #### Updated Cities
 
@@ -140,9 +140,9 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 - `IZO` - 中海 (Nakaumi)
 - `AKJ` - 旭川 (Asahikawa)
 - `AOJ` - 津軽 (Tsugaru)
-- `FKS` - 中通り / Nakadōri
-- `SHB` - 根室 / Nemuro
-- `WKJ` - 稚内 / Wakkanai
+- `FKS` - 中通り (Nakadōri)
+- `SHB` - 根室 (Nemuro)
+- `WKJ` - 稚内 (Wakkanai)
 
 #### New Features
 
@@ -161,8 +161,8 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities (for testing only)
 
-- `SHB` - 根室 / Nemuro
-- `WKJ` - 稚内 / Wakkanai
+- `SHB` - 根室 (Nemuro)
+- `WKJ` - 稚内 (Wakkanai)
 
 #### Other Features
 
@@ -181,10 +181,10 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities
 
-- `AKJ` - 旭川 / Asahikawa
-- `AOJ` - 津軽 / Tsugaru (青森(Aomori)・弘前(Hirosaki))
-- `FKS` - 中通り / Nakadōri (福島(Fukushima)・郡山(Kōriyama))
-- `FSZ` - 静岡・浜松 / Shizuoka・Hamamatsu
+- `AKJ` - 旭川 (Asahikawa)
+- `AOJ` - 津軽 (Tsugaru (青森(Aomori)・弘前(Hirosaki)))
+- `FKS` - 中通り (Nakadōri (福島(Fukushima)・郡山(Kōriyama)))
+- `FSZ` - 静岡・浜松 (Shizuoka・Hamamatsu)
 
 #### Updated Cities
 
@@ -212,7 +212,7 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities
 
-- `NGO` - 名古屋 / Nagoya
+- `NGO` - 名古屋 (Nagoya)
 
 #### Other Features
 
@@ -234,8 +234,8 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities
 
-- `ITM` - 大阪 / Ōsaka
-- `OKJ` - 岡山 / Okayama
+- `ITM` - 大阪 (Ōsaka)
+- `OKJ` - 岡山 (Okayama)
 
 #### New Features
 
@@ -267,11 +267,11 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities
 
-- `HKD` - 函館 / Hakodate
-- `IZO` - 中海 / Nakaumi (出雲 (Izumo)・松江 (Matsue)・米子 (Yonago))
-- `NGS` - 長崎 / Nagasaki
-- `TAK` - 高松 / Takamatsu
-- `TOY` - 富山 / Toyama
+- `HKD` - 函館 (Hakodate)
+- `IZO` - 中海 (Nakaumi (出雲 (Izumo)・松江 (Matsue)・米子 (Yonago)))
+- `NGS` - 長崎 (Nagasaki)
+- `TAK` - 高松 (Takamatsu)
+- `TOY` - 富山 (Toyama)
 
 #### New Features
 
@@ -290,11 +290,11 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### New Cities
 
-- `KCZ` - 高知 / Kōchi
-- `KIJ` - 新潟 / Niigata
-- `KKJ` - 北九州 / Kitakyūshū
-- `OKA` - 沖縄 / Okinawa
-- `UKY` - 京都 / Kyōto
+- `KCZ` - 高知 (Kōchi)
+- `KIJ` - 新潟 (Niigata)
+- `KKJ` - 北九州 (Kitakyūshū)
+- `OKA` - 沖縄 (Okinawa)
+- `UKY` - 京都 (Kyōto)
 
 #### New Features
 
@@ -310,14 +310,14 @@ Suggestions are greatly appreciated and I will do my best to accommodate request
 
 #### Initial Cities
 
-- `FUK` - 福岡 / Fukuoka
-- `GAJ` - 山形 / Yamagata
-- `HIJ` - 広島 / Hiroshima
-- `KOJ` - 鹿児島 / Kagoshima
-- `MYJ` - 松山 / Matsuyama
-- `SDJ` - 仙台 / Sendai
-- `SPK` - 札幌 / Sapporo
-- `UKB` - 神戸 / Kōbe
+- `FUK` - 福岡 (Fukuoka)
+- `GAJ` - 山形 (Yamagata)
+- `HIJ` - 広島 (Hiroshima)
+- `KOJ` - 鹿児島 (Kagoshima)
+- `MYJ` - 松山 (Matsuyama)
+- `SDJ` - 仙台 (Sendai)
+- `SPK` - 札幌 (Sapporo)
+- `UKB` - 神戸 (Kōbe)
 
 ## Planned Updates
 
