@@ -72,6 +72,10 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 - **Expanded metropolitan boundaries.** The five updated maps use redrawn metropolitan-area boundaries with fuller commuter-shed coverage — most notably 神戸 (Kōbe), which now extends west to include 姫路 (Himeji).
 
+- **Refreshed special-demand coverage.** The five returning maps have their full special-demand set — cultural attractions, universities and schools, hospitals, ports, and more — re-curated from the ground up against prefectural and municipal statistics using the standardized attraction-demand research process. Most of these maps had not been reworked since their initial release, so this is a substantial expansion of their modeled demand beyond residence and workplace commute.
+
+- **Military base demand.** Self-Defense Force installations are now modeled as demand points wherever they fall within a map's extent, with personnel estimated from unit composition per base or garrison — net-new for these maps (Sendai, Kōbe / Himeji, Niigata, Yamagata, and the Keihanshin megaregion all contain JSDF bases).
+
 - **Resident and worker points snap to buildings.** Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism in dense urban blocks and industrial estates.
 
 - **Updated buildings index.** The buildings index for each map is now packaged in both `.bin` and `.json` formats, to enable compatibility with the most recent versions of the simulation engine; the building-amalgamation pass that shrinks the index on larger maps is also refined to preserve coverage more faithfully.
