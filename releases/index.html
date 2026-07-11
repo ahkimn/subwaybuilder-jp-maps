@@ -41,75 +41,59 @@
     <article class="readme">
 <h1>subwaybuilder-jp-maps</h1>
 <h2>Summary</h2>
-<p>Each map is limited to the metropolitan area (都市圏) around one or more major Japanese cities. Metropolitan area bounds are taken from the 2015 (csis.u-tokyo.ac.jp) 大都市雇用圏 dataset, with updates to ensure present-day administrative borders are honored</p>
+<p>Each map covers the metropolitan area (都市圏) around one or more major Japanese cities. Metropolitan-area bounds are taken from the 2015 大都市雇用圏 (Metropolitan Employment Area) dataset (csis.u-tokyo.ac.jp), with adjustments so present-day administrative borders are honored.</p>
 <h2>Features</h2>
 <ul>
-  <li>High level of detail, with sub-250m population placements in dense areas.</li>
-  <li>Spatial realism -- points are assigned in a manner that is aware of water features and mesh-weighted</li>
-  <li>Special demand from several sources is also modeled</li>
-  <li style="margin-left: 1.25em;"><strong>Airports</strong></li>
-  <li style="margin-left: 2.50em;">Demand based on annualized passenger statistics, split by international &amp; national travelers</li>
-  <li style="margin-left: 1.25em;"><strong>Ports</strong></li>
-  <li style="margin-left: 2.50em;">Demand based on annualized passenger statistics</li>
-  <li style="margin-left: 1.25em;"><strong>Hospitals</strong></li>
-  <li style="margin-left: 2.50em;">Demand based on heuristic of reported bed capacity and known prefectural inpatient bed usage and outpatient visitation rates</li>
-  <li style="margin-left: 1.25em;"><strong>Institutions of Learning</strong></li>
-  <li style="margin-left: 2.50em;">Students in primary education (小学校・中学校) (clipped to school districts)</li>
-  <li style="margin-left: 2.50em;">Students in secondary education (高等学校) (sized by overall municipal enrollment)</li>
-  <li style="margin-left: 2.50em;">Students in post-secondary (大学・短期大学) (sized by real enrollment figures)</li>
-  <li style="margin-left: 1.25em;"><strong>Cultural Attractions</strong></li>
-  <li style="margin-left: 2.50em;">Attendance figures + candidate institutions sourced from prefectural/municipal reports (e.g. <a href="https://www.pref.yamaguchi.lg.jp/uploaded/life/217842_497518_misc.pdf">山口県の宿泊者及び観光客の動向</a>)</li>
-  <li style="margin-left: 2.50em;">Zoos / Botanical Gardens / Aquariums (動物園・植物園・水族館)</li>
-  <li style="margin-left: 2.50em;">Art &amp; History Museums (美術館・博物館)</li>
-  <li style="margin-left: 2.50em;">Parks / Sports Facilities / Stadiums (公園・運動公園・総合運動公園・スタジアム・競技場)</li>
-  <li style="margin-left: 2.50em;">Major shrines/temples + landmarks (神社・寺・世界遺産・国宝)</li>
-  <li style="margin-left: 1.25em;"><strong>Military Bases</strong></li>
-  <li style="margin-left: 2.50em;">Personnel modeled from unit composition per garrison/base</li>
-  <li>OSRM routing included</li>
-  <li>Building depth is default to -10m, with train-related infrastructure exempt</li>
+  <li>High level of detail, with sub-250 m population placement in dense areas.</li>
+  <li>Spatial realism — points are assigned in a manner that is aware of water features and mesh-weighted density surfaces.</li>
+  <li>Special demand from several sources is modeled — covering airports, ports, hospitals, schools and universities, cultural attractions, and military bases. See <a href="#special-demand-details">Special Demand Details</a> below for the per-category breakdown.</li>
+  <li>Buildings are sourced from Overture Maps, with heights back-filled from the Global Building Atlas LoD1 raster.</li>
+  <li>OSRM routing is included, with a scaling driving-time penalty based on commute distance and metropolitan-area size.</li>
+  <li>Building foundation depth (the clearance a subway tunnel needs to pass beneath) defaults to −10 m; train-related infrastructure is exempt.</li>
 </ul>
 <h2>High-Level Methodology</h2>
-<p>Resident + Commuter totals are approximated using employed persons / workers (就業者数・従業者数) counts per (小地域) augmented by 500m (labor) and 250/100m (resident + approximate population) meshes to achieve sub-小地域 level point placement. Population counts by 小地域 are conserved, and point balancing is done through a mesh (population/worker) aware loss function</p>
-<p>Gravity model is augmented by known O/D commute patterns by designated city ward (区) or municipality (市町村) to realistically simulate macro-level commute data in the absence of true O/D pairs</p>
+<p>Resident and commuter totals are approximated from employed-persons / workers (就業者数・従業者数) counts per 小地域 (small statistical area), augmented by 500 m (labor) and 250 / 100 m (resident) meshes to achieve sub-小地域 point placement. Population counts per 小地域 are conserved, and point balancing is done through a mesh-aware (population / worker) loss function.</p>
+<p>A gravity model augmented with known origin/destination commute patterns by designated-city ward (区) or municipality (市町村) reproduces macro-level commute behaviour in the absence of published sub-municipal O/D pairs.</p>
 <h2>Primary Data Sources</h2>
 <ul>
-  <li>令和2年国勢調査 (e-stat.go.jp)</li>
-  <li>令和3年経済センサス (e-stat.go.jp)</li>
-  <li>国土数値情報 (nlftp.mlit.go.jp)</li>
-  <li>大学ポートレート(shigaku.go.jp + niad.ac.jp)</li>
-  <li>学校基本調査 (mext.go.jp)</li>
-  <li>観光統計 (statistics.jnto.go.jp)</li>
-  <li>「海しるAPI」 (portal.msil.go.jp) | J-EGG500 (jodc.go.jp)</li>
-  <li>Overture Maps 建物データ (overturemaps.org)</li>
-  <li>Global Building Atlas LoD1 — 建物高さ (huggingface.co/datasets/zhu-xlab)</li>
-  <li>令和6年医療施設（動態）調査 (mhlw.go.jp)</li>
-  <li>OpenStreetMap — 道路ネットワーク (openstreetmap.org)</li>
+  <li><strong>令和2年国勢調査 (2020 Population Census)</strong> (per-小地域 population, employment, and economic-activity counts) — <a href="https://www.e-stat.go.jp/">e-Stat</a></li>
+  <li><strong>令和3年経済センサス (2021 Economic Census)</strong> (per-小地域 workplace and worker counts) — <a href="https://www.e-stat.go.jp/">e-Stat</a></li>
+  <li><strong>国土数値情報 (National Land Numerical Information)</strong> (administrative boundaries, coastline, land use, and facility locations) — <a href="https://nlftp.mlit.go.jp/">国土数値情報 (MLIT)</a></li>
+  <li><strong>大学ポートレート (University Portraits)</strong> (per-institution higher-education enrollment) — <a href="https://www.shigaku.go.jp/">私学版 (JASSO)</a> · <a href="https://www.niad.ac.jp/">国公立版 (NIAD)</a></li>
+  <li><strong>学校基本調査 (School Basic Survey)</strong> (per-municipality primary and secondary enrollment) — <a href="https://www.mext.go.jp/">MEXT</a></li>
+  <li><strong>観光統計 (Tourism Statistics)</strong> (attraction visitor counts, supplemented by prefectural / municipal reports) — <a href="https://statistics.jnto.go.jp/">JNTO</a></li>
+  <li><strong>Coastal Bathymetry</strong> (seafloor depth driving the coastal ocean-foundation layer) — <a href="https://www.msil.go.jp/">海しる MSIL</a> · <a href="https://www.jodc.go.jp/">J-EGG500 (JODC)</a></li>
+  <li><strong>令和6年医療施設（動態）調査 (2024 Medical Facility Survey)</strong> (per-facility hospital bed capacity) — <a href="https://www.mhlw.go.jp/">MHLW</a></li>
+  <li><strong>Auxiliary Building Footprints</strong> (Overture Maps — the source for the 3D building tiles and ocean-mask polygons) — <a href="https://overturemaps.org/">Overture Maps Foundation</a></li>
+  <li><strong>Building Heights</strong> (Global Building Atlas LoD1 per-building height raster) — <a href="https://huggingface.co/datasets/zhu-xlab">GBA (Hugging Face)</a></li>
+  <li><strong>Road Network</strong> (OSM road and areal-road geometry) — <a href="https://www.openstreetmap.org/">OpenStreetMap</a></li>
+  <li><strong>Routing Network</strong> (OSRM routing shared with the broader Subway Builder map pipeline) — <a href="http://project-osrm.org/">OSRM Project</a></li>
 </ul>
 <h2>Issues/Questions</h2>
-<p>Please raise an issue on this repository or reach out to me directly on the pack&#x27;s dedicated <a href="https://discord.com/channels/1420846272545296470/1479686112896356605">thread</a> for any issues. Suggestions are greatly appreciated and I will do my best to accommodate requests (so long as they are reasonable).</p>
+<p>Please raise an issue on this repository, or reach out directly on the pack&#x27;s dedicated <a href="https://discord.com/channels/1420846272545296470/1479686112896356605">thread</a>, for any problems. Suggestions are greatly appreciated and will be accommodated where reasonable.</p>
 <h2>Known Issues</h2>
 <ul>
-  <li>鹿児島 (Kagoshima) has park data encoded within the ocean due to the national park surrounding 桜島 (Sakurajima).</li>
-  <li>広島 (Hiroshima) has an improbably tall building -- OSM error</li>
-  <li>富山 (Toyama) has a very isolated point deep in the mountains -- algorithm quirk</li>
+  <li>鹿児島 (Kagoshima) has park data encoded within the ocean, due to the national park surrounding 桜島 (Sakurajima).</li>
+  <li>広島 (Hiroshima) has an improbably tall building — an OSM source error.</li>
+  <li>富山 (Toyama) has a very isolated point deep in the mountains — an algorithm quirk.</li>
 </ul>
 <h2>Changelog</h2>
 <h3>0.3.8 (2026-04-20)</h3>
 <h4>Updated Cities</h4>
 <ul>
-  <li><code>ITM</code> - 大阪 / Ōsaka</li>
-  <li><code>FOKK</code> - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))</li>
+  <li><code>ITM</code> - 大阪 (Ōsaka)</li>
+  <li><code>FOKK</code> - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))</li>
   <li><code>FUK</code> - 福岡 (Fukuoka)</li>
   <li><code>KKJ</code> - 北九州 (Kitakyūshū)</li>
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>Military base personnel are now modeled, with personnel counts estimated from unit composition per base/garrison</li>
-  <li>ITM updated to have full special demand coverage (~300 additional points), better points seeding, as well as performance optimization through building aggregation</li>
-  <li>FOKK/FUK/KKJ maps updated with better points seeding from 0.3.7 and a modest number of additional special demand sources</li>
+  <li><strong>Military base demand.</strong> Personnel are now modeled, with counts estimated from unit composition per base / garrison.</li>
+  <li><strong>Ōsaka (ITM) special-demand + seeding pass.</strong> Full special-demand coverage, improved point seeding, and performance optimization via building aggregation.</li>
+  <li><strong>Fukuoka-area refresh (FOKK / FUK / KKJ).</strong> Improved point seeding carried over from 0.3.7, plus additional special-demand sources.</li>
 </ul>
-<h5>Cross 町丁 repulsion for Ōsaka</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/osaka_before.png" alt="Ōsaka before seeding change" loading="lazy" /> <img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/osaka_after.png" alt="Ōsaka after seeding change" loading="lazy" /></p>
+<h5>Cross-町丁 repulsion for Ōsaka</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/osaka_before.png" alt="Ōsaka before the seeding change" loading="lazy" /> <img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/osaka_after.png" alt="Ōsaka after the seeding change" loading="lazy" /></p>
 <h3>0.3.7 (2026-04-17)</h3>
 <h4>Updated Cities</h4>
 <ul>
@@ -121,35 +105,29 @@
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>All updated maps received significant reworks to include:</li>
-  <li style="margin-left: 1.25em;">Attractions-based demand (~3-7% of total demand)</li>
-  <li style="margin-left: 1.25em;">Bathymetric data from J-EGG500 + MSIL as well</li>
-  <li style="margin-left: 1.25em;">Neighborhood labels</li>
-  <li style="margin-left: 1.25em;">Overture sourced buildings</li>
-  <li>SPK updated to extend southeast to 苫小牧 (Tomakomai) as well as northeast to 岩見沢 (Iwamizawa)</li>
-  <li>Initial point seeding is made aware of cross-町丁 points</li>
-  <li style="margin-left: 1.25em;">Additional point repulsion pass added at this part of the pipeline which should reduce crowding in dense areas (e.g. 福岡 (Fukuoka) center)</li>
-  <li>Point seeding is also aware of elongated 町丁 shapes.</li>
-  <li style="margin-left: 1.25em;">町丁 with high aspect ratios are now force seeded with multiple points so that individual points do not represent extreme spatial distance</li>
-  <li>On larger maps, building collision boxes are now <code>amalgamated</code> to reduce index size without incurring huge losses in coverage</li>
+  <li><strong>Significant rework of all updated maps.</strong> Each now includes attractions-based demand, coastal bathymetry, neighborhood labels, and Overture-sourced buildings.</li>
+  <li><strong>Sapporo (SPK) extent expanded.</strong> Now reaches southeast to 苫小牧 (Tomakomai) and northeast to 岩見沢 (Iwamizawa).</li>
+  <li><strong>Cross-町丁 point seeding.</strong> Initial seeding is now aware of neighbouring-町丁 points, with an added repulsion pass that reduces crowding in dense areas (e.g. central Fukuoka).</li>
+  <li><strong>Elongated-町丁 handling.</strong> 町丁 with high aspect ratios are force-seeded with multiple points so a single point does not stand in for an extreme spatial extent.</li>
+  <li><strong>Building-collision aggregation on larger maps.</strong> Collision boxes are aggregated to reduce index size with minimal loss of coverage.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>Fixed designated city ward mapping to be consistent with other municipal labels (e.g. 神戸市中央区|Kōbeshichūōku =&gt; 中央区｜Chūō-Ku)</li>
+  <li><strong>Consistent ward labeling.</strong> Designated-city ward labels now match the other municipal labels (e.g. 神戸市中央区 / Kōbeshichūōku → 中央区 / Chūō-Ku).</li>
 </ul>
-<h5>Cross 町丁 repulsion</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/cross_chocho_repulsion.png" alt="chocho_repulsion" loading="lazy" /></p>
-<h5>Elongated 町丁 handling (Before)</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/elongated_chocho_before.png" alt="alt text" loading="lazy" /></p>
-<h5>Elongated 町丁 handling (After)</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/elongated_chocho_after.png" alt="alt text" loading="lazy" /></p>
+<h5>Cross-町丁 repulsion</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/cross_chocho_repulsion.png" alt="Cross-町丁 point repulsion" loading="lazy" /></p>
+<h5>Elongated-町丁 handling (before)</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/elongated_chocho_before.png" alt="Elongated 町丁 before" loading="lazy" /></p>
+<h5>Elongated-町丁 handling (after)</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/elongated_chocho_after.png" alt="Elongated 町丁 after" loading="lazy" /></p>
 <h3>0.3.6 (2026-04-16)</h3>
 <h4>New Cities</h4>
 <ul>
-  <li><code>FOKK</code> - 福北 / Fukuhoku (福岡(Fukuoka)・北九州(Kitakyūshū))</li>
-  <li><code>HNA</code> - 盛岡 / Morioka</li>
-  <li><code>KMJ</code> - 熊本 / Kumamoto</li>
-  <li><code>TTJ</code> - 鳥取 / Tottori</li>
+  <li><code>FOKK</code> - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))</li>
+  <li><code>HNA</code> - 盛岡 (Morioka)</li>
+  <li><code>KMJ</code> - 熊本 (Kumamoto)</li>
+  <li><code>TTJ</code> - 鳥取 (Tottori)</li>
 </ul>
 <h4>Updated Cities</h4>
 <ul>
@@ -159,174 +137,180 @@
   <li><code>IZO</code> - 中海 (Nakaumi)</li>
   <li><code>AKJ</code> - 旭川 (Asahikawa)</li>
   <li><code>AOJ</code> - 津軽 (Tsugaru)</li>
-  <li><code>FKS</code> - 中通り / Nakadōri</li>
-  <li><code>SHB</code> - 根室 / Nemuro</li>
-  <li><code>WKJ</code> - 稚内 / Wakkanai</li>
+  <li><code>FKS</code> - 中通り (Nakadōri)</li>
+  <li><code>SHB</code> - 根室 (Nemuro)</li>
+  <li><code>WKJ</code> - 稚内 (Wakkanai)</li>
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>All updated maps received new bathymetric data from J-EGG500 + MSIL as well as neighborhood labels + Overture sourced buildings</li>
-  <li style="margin-left: 1.25em;">Four existing older maps (FUK, HKD, KKJ, IZO) received significant reworks to include attractions-based demand (~3-10% of total demand)</li>
-  <li style="margin-left: 1.25em;">Three existing newer maps (AKJ, AOJ, FKS) + test maps (SHB, WKJ) received minor updates as they already had attractions-based demand included, but received new bathymetric data and Overture sourced buildings</li>
-  <li>Added distance / city-scale aware driving time penalty to OSRM routing to make it less optimistic</li>
-  <li>Standardized research process for determining attraction demand (e.g. attendance figures / municipal or prefectural reports) to be applied across all maps moving forward</li>
+  <li><strong>Bathymetry, labels, and Overture buildings across all updated maps.</strong> Older maps (FUK, HKD, KKJ, IZO) received the full rework to include attractions-based demand; newer maps (AKJ, AOJ, FKS) and the test maps (SHB, WKJ) received the bathymetry and Overture buildings on top of their existing attractions demand.</li>
+  <li><strong>Distance- and city-scale-aware routing penalty.</strong> A driving-time penalty is added to OSRM routing to make it less optimistic.</li>
+  <li><strong>Standardized attraction-demand research process.</strong> A consistent method for determining attraction demand (attendance figures, municipal / prefectural reports) is now applied across all maps going forward.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>Integrated repository with future standardized special demand tagging format</li>
-  <li>Added map description template (now standard for all <code>registry</code> maps) along with preview images</li>
+  <li><strong>Standard special-demand tagging format.</strong> The repository is integrated with the shared special-demand tagging format.</li>
+  <li><strong>Map description template + preview images.</strong> Now standard for all registry maps.</li>
 </ul>
 <h3>0.3.5 (2026-04-12)</h3>
-<h4>New Cities (for testing only)</h4>
+<h4>New Cities (testing only)</h4>
 <ul>
-  <li><code>SHB</code> - 根室 / Nemuro</li>
-  <li><code>WKJ</code> - 稚内 / Wakkanai</li>
+  <li><code>SHB</code> - 根室 (Nemuro)</li>
+  <li><code>WKJ</code> - 稚内 (Wakkanai)</li>
 </ul>
-<h4>Other Features</h4>
 <h3>0.3.4 (2026-04-08)</h3>
 <h4>New Features</h4>
 <ul>
-  <li>Switched to Overture for buildings generation</li>
-  <li>Added per-tile building / water stitching to .pmtiles so that rendering becomes much less taxing at lower zoom</li>
+  <li><strong>Overture buildings.</strong> Switched to Overture for building generation.</li>
+  <li><strong>Per-tile building / water stitching.</strong> Building and water features are stitched into the pmtiles so rendering is much less taxing at lower zoom.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>名古屋 (Nagoya) and 大阪 (Ōsaka) updated to test new optimizations</li>
+  <li><strong>Nagoya + Ōsaka optimization test.</strong> 名古屋 (Nagoya) and 大阪 (Ōsaka) updated to trial the new optimizations.</li>
 </ul>
 <h3>0.3.3 (2026-04-05)</h3>
 <h4>New Cities</h4>
 <ul>
-  <li><code>AKJ</code> - 旭川 / Asahikawa</li>
-  <li><code>AOJ</code> - 津軽 / Tsugaru (青森(Aomori)・弘前(Hirosaki))</li>
-  <li><code>FKS</code> - 中通り / Nakadōri (福島(Fukushima)・郡山(Kōriyama))</li>
-  <li><code>FSZ</code> - 静岡・浜松 / Shizuoka・Hamamatsu</li>
+  <li><code>AKJ</code> - 旭川 (Asahikawa)</li>
+  <li><code>AOJ</code> - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))</li>
+  <li><code>FKS</code> - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))</li>
+  <li><code>FSZ</code> - 静岡・浜松 (Shizuoka + Hamamatsu)</li>
 </ul>
 <h4>Updated Cities</h4>
 <ul>
-  <li><code>HIJ</code> - 広島 (Hiroshima) expanded to include 東広島・岩国 (Higashihiroshima + Iwakuni)</li>
+  <li><code>HIJ</code> - 広島 (Hiroshima), expanded to include 東広島 + 岩国 (Higashihiroshima + Iwakuni)</li>
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>Added demand from custom attractions (e.g. major parks, sports venues, cultural icons)</li>
-  <li style="margin-left: 1.25em;">Primarily sourced from prefectural / municipal documents related to annual reports/national censuses</li>
-  <li>Added bathymetric data from J-EGG500 + MSIL to add ocean foundations layers for new and reworked maps</li>
+  <li><strong>Custom attraction demand.</strong> Added for major parks, sports venues, and cultural icons, sourced primarily from prefectural / municipal annual reports and censuses.</li>
+  <li><strong>Coastal ocean foundations.</strong> Bathymetric data adds ocean-foundation layers for new and reworked maps.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>Added reconciliation of 小地域 (small boundary area) job counts vs. 500m job mesh to reduce outliers (e.g. high concentration of workers near a certain set of rice fields)</li>
-  <li style="margin-left: 1.25em;">Will be applied to all new maps + reworks moving forward</li>
+  <li><strong>小地域 vs 500 m mesh worker reconciliation.</strong> Job counts are reconciled against the 500 m job mesh to reduce outliers (e.g. worker concentrations over rice fields). Applied to all new maps and reworks going forward.</li>
 </ul>
-<h4>Images</h4>
-<h5>Bathymetric Data</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/bathymetric_data.png" alt="bathymetric_data" loading="lazy" /></p>
-<h5>Custom Attractions</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/custom_attractions.png" alt="custom_attractions" loading="lazy" /></p>
+<h5>Bathymetric data</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/bathymetric_data.png" alt="Bathymetric data" loading="lazy" /></p>
+<h5>Custom attractions</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/custom_attractions.png" alt="Custom attractions" loading="lazy" /></p>
 <h3>0.3.2 (2026-03-27)</h3>
 <h4>New Cities</h4>
 <ul>
-  <li><code>NGO</code> - 名古屋 / Nagoya</li>
+  <li><code>NGO</code> - 名古屋 (Nagoya)</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>Demand data post-processing made more aggressive (reducing precision to reduce overall data size).</li>
-  <li style="margin-left: 1.25em;">As a result 大阪 / Ōsaka should also be even less demanding on the game.</li>
+  <li><strong>More aggressive demand post-processing.</strong> Demand precision is reduced to shrink overall data size; as a result Ōsaka is also less demanding on the game.</li>
 </ul>
 <h3>0.3.1 (2026-03-25)</h3>
 <h4>New Features</h4>
 <ul>
-  <li>Buildings index for 大阪 / Ōsaka significantly reduced to improve playability / renderer OOM crashes.</li>
-  <li style="margin-left: 1.25em;">Renderer now crashes with exit code <code>0x8B1D</code> which suggests playing the map with GPU rasterization off will help improve stability</li>
+  <li><strong>Reduced Ōsaka buildings index.</strong> Significantly smaller to improve playability and avoid renderer out-of-memory crashes.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>Updating building processing filter to more aggressively prune small buildings with multiple polygons</li>
+  <li><strong>More aggressive small-building pruning.</strong> The building-processing filter now more aggressively prunes small multi-polygon buildings.</li>
 </ul>
 <h3>0.3.0 (2026-03-22)</h3>
 <h4>New Cities</h4>
 <ul>
-  <li><code>ITM</code> - 大阪 / Ōsaka</li>
-  <li><code>OKJ</code> - 岡山 / Okayama</li>
+  <li><code>ITM</code> - 大阪 (Ōsaka)</li>
+  <li><code>OKJ</code> - 岡山 (Okayama)</li>
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>Added demand for ~110 universities/technical colleges with no matching enrollment data (totalling ~140k students)</li>
-  <li>Added demand for ~70 aquariums / zoos / botanical gardens</li>
+  <li><strong>University and college demand.</strong> Added for institutions without matching enrollment data.</li>
+  <li><strong>Zoo, aquarium, and botanical-garden demand.</strong> Added across the fleet.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
-  <li>Rebalanced overall population to be logarithmic mean of (employed persons / workers) for consistency</li>
-  <li style="margin-left: 1.25em;">Most cities should see a ~5-10% increase in total population as a result</li>
-  <li>Rebalanced min/max demand totals for individual points based on overall metropolitan area size</li>
-  <li style="margin-left: 1.25em;">Smaller, less dense metropolitan areas (e.g. 山形・函館・高知) will see greater point density as a result</li>
-  <li style="margin-left: 1.25em;">Larger, already dense metropolitan areas (e.g. 神戸・福岡) should see very little change</li>
-  <li>Point seeding algorithm now takes into account 100m mesh population estimates to avoid placing resident point in areas with no buildings</li>
-  <li style="margin-left: 1.25em;">Most apparent in highly rural areas of the map</li>
-  <li>Added final point/displacement/agglomeration algorithm to reduce very dense point spacing in urban centers</li>
+  <li><strong>Logarithmic-mean population rebalance.</strong> Overall population is rebalanced to the logarithmic mean of employed-persons / workers for consistency; most cities see a modest increase.</li>
+  <li><strong>Metropolitan-scale demand rebalance.</strong> Per-point min / max demand totals now scale with metropolitan-area size — smaller, less dense areas gain point density, while large dense areas change little.</li>
+  <li><strong>Building-aware point seeding.</strong> Seeding now uses 100 m mesh population estimates to avoid placing resident points where there are no buildings, most apparent in rural areas.</li>
+  <li><strong>Point displacement + agglomeration pass.</strong> A final pass reduces very dense point spacing in urban centers.</li>
 </ul>
 <h4>Bugfixes</h4>
 <ul>
-  <li>Removed fixed-order origin point assignment in O/D calculation assignment causing significant &quot;skew&quot; in municipality origins for large destination points</li>
-  <li style="margin-left: 1.25em;">This fix also signifcantly reduces the share of municipal O/D misalignment going to the smallest municipalities</li>
+  <li><strong>Corrected O/D origin skew.</strong> Removed the fixed-order origin-point assignment that skewed municipality origins for large destination points, and reduced the share of municipal O/D misalignment sent to the smallest municipalities.</li>
 </ul>
-<h4>Images</h4>
-<h5>Municipal O/D Diagram</h5>
-<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/od_municipality.png" alt="updated_o_d_debug" loading="lazy" /></p>
+<h5>Municipal O/D diagram</h5>
+<p><img src="https://raw.githubusercontent.com/ahkimn/subwaybuilder-jp-maps/main/img/od_municipality.png" alt="Municipal O/D" loading="lazy" /></p>
 <h3>0.2.0 (2026-03-15)</h3>
 <h4>New Cities</h4>
 <ul>
-  <li><code>HKD</code> - 函館 / Hakodate</li>
-  <li><code>IZO</code> - 中海 / Nakaumi (出雲 (Izumo)・松江 (Matsue)・米子 (Yonago))</li>
-  <li><code>NGS</code> - 長崎 / Nagasaki</li>
-  <li><code>TAK</code> - 高松 / Takamatsu</li>
-  <li><code>TOY</code> - 富山 / Toyama</li>
+  <li><code>HKD</code> - 函館 (Hakodate)</li>
+  <li><code>IZO</code> - 中海 (Nakaumi — 出雲 (Izumo) + 松江 (Matsue) + 米子 (Yonago))</li>
+  <li><code>NGS</code> - 長崎 (Nagasaki)</li>
+  <li><code>TAK</code> - 高松 (Takamatsu)</li>
+  <li><code>TOY</code> - 富山 (Toyama)</li>
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>Added demand from ports / hospitals</li>
-  <li>Rebalancing patch across all existing special demand types</li>
-  <li style="margin-left: 1.25em;">Airports / Universities / High Schools get significant haircuts on overall demand</li>
-  <li>Added padding around boundary so that there is a larger buffer between coastline and black tiles</li>
+  <li><strong>Port and hospital demand.</strong> Added across existing maps.</li>
+  <li><strong>Special-demand rebalance.</strong> A rebalancing pass across all existing special-demand types; airports, universities, and high schools receive significant haircuts.</li>
+  <li><strong>Coastline padding.</strong> Added a larger buffer between the coastline and the black off-map tiles.</li>
 </ul>
 <h4>Bugfixes</h4>
 <ul>
-  <li>Fixed elementary/middle school demand being based (inadvertently) off of municipal class count fallback</li>
-  <li style="margin-left: 1.25em;">Demand now relies on much more accurate estimate based off of 15歳未満 (under-15) totals per municipality</li>
-  <li>Fixed the map for 神戸 (Kobe) missing building depth</li>
+  <li><strong>Corrected primary / secondary school demand.</strong> No longer based inadvertently on the municipal class-count fallback; demand now relies on a more accurate under-15 (15歳未満) total per municipality.</li>
+  <li><strong>Restored Kobe building depth.</strong> Fixed the missing building depth on the 神戸 (Kobe) map.</li>
 </ul>
 <h3>0.1.3 (2026-03-09)</h3>
 <h4>New Cities</h4>
 <ul>
-  <li><code>KCZ</code> - 高知 / Kōchi</li>
-  <li><code>KIJ</code> - 新潟 / Niigata</li>
-  <li><code>KKJ</code> - 北九州 / Kitakyūshū</li>
-  <li><code>OKA</code> - 沖縄 / Okinawa</li>
-  <li><code>UKY</code> - 京都 / Kyōto</li>
+  <li><code>KCZ</code> - 高知 (Kōchi)</li>
+  <li><code>KIJ</code> - 新潟 (Niigata)</li>
+  <li><code>KKJ</code> - 北九州 (Kitakyūshū)</li>
+  <li><code>OKA</code> - 沖縄 (Okinawa)</li>
+  <li><code>UKY</code> - 京都 (Kyōto)</li>
 </ul>
 <h4>New Features</h4>
 <ul>
-  <li>Added neighborhood/city labels.</li>
+  <li><strong>Neighborhood and city labels.</strong> Added across the fleet.</li>
 </ul>
 <h3>0.1.2 (2026-03-08)</h3>
 <h4>New Features</h4>
 <ul>
-  <li>Added special demand from primary/secondary age students commuting to school.</li>
+  <li><strong>Primary / secondary school demand.</strong> Added for primary- and secondary-age students commuting to school.</li>
 </ul>
 <h3>0.1.1 (2026-03-07)</h3>
 <h4>Initial Cities</h4>
 <ul>
-  <li><code>FUK</code> - 福岡 / Fukuoka</li>
-  <li><code>GAJ</code> - 山形 / Yamagata</li>
-  <li><code>HIJ</code> - 広島 / Hiroshima</li>
-  <li><code>KOJ</code> - 鹿児島 / Kagoshima</li>
-  <li><code>MYJ</code> - 松山 / Matsuyama</li>
-  <li><code>SDJ</code> - 仙台 / Sendai</li>
-  <li><code>SPK</code> - 札幌 / Sapporo</li>
-  <li><code>UKB</code> - 神戸 / Kōbe</li>
+  <li><code>FUK</code> - 福岡 (Fukuoka)</li>
+  <li><code>GAJ</code> - 山形 (Yamagata)</li>
+  <li><code>HIJ</code> - 広島 (Hiroshima)</li>
+  <li><code>KOJ</code> - 鹿児島 (Kagoshima)</li>
+  <li><code>MYJ</code> - 松山 (Matsuyama)</li>
+  <li><code>SDJ</code> - 仙台 (Sendai)</li>
+  <li><code>SPK</code> - 札幌 (Sapporo)</li>
+  <li><code>UKB</code> - 神戸 (Kōbe)</li>
 </ul>
 <h2>Planned Updates</h2>
 <ul>
-  <li>Continue reworking older maps to include new content (attractions, bathymetry, etc.)</li>
-  <li>Additional cities not yet covered!</li>
+  <li>Continue reworking older maps to include newer content (attractions, bathymetry, and other cross-cutting features).</li>
+  <li>Additional cities not yet covered.</li>
+</ul>
+<h2>Special Demand Details</h2>
+<p>Per-category breakdown of the modeled demand-point categories beyond residence and workplace commute. Each category is geocoded against the relevant authoritative source and sized from operator- or government-published visitor / passenger / enrollment / bed-count figures.</p>
+<ul>
+  <li><strong>Airports</strong></li>
+  <li style="margin-left: 1.25em;">Demand based on annualized passenger statistics, split by international and domestic travelers.</li>
+  <li><strong>Ports</strong></li>
+  <li style="margin-left: 1.25em;">Demand based on annualized passenger statistics.</li>
+  <li><strong>Hospitals</strong></li>
+  <li style="margin-left: 1.25em;">Sized from reported bed capacity combined with known prefectural inpatient bed-usage and outpatient visitation rates.</li>
+  <li><strong>Institutions of Learning</strong></li>
+  <li style="margin-left: 1.25em;">Primary and middle-school students (小学校・中学校), clipped to school districts.</li>
+  <li style="margin-left: 1.25em;">High-school students (高等学校), sized by overall municipal enrollment.</li>
+  <li style="margin-left: 1.25em;">Post-secondary students (大学・短期大学), sized from real enrollment figures.</li>
+  <li><strong>Cultural Attractions</strong></li>
+  <li style="margin-left: 1.25em;">Attendance figures and candidate sites sourced from prefectural / municipal reports.</li>
+  <li style="margin-left: 1.25em;">Zoos, botanical gardens, and aquariums (動物園・植物園・水族館).</li>
+  <li style="margin-left: 1.25em;">Art and history museums (美術館・博物館).</li>
+  <li style="margin-left: 1.25em;">Parks, sports facilities, and stadiums (公園・運動公園・総合運動公園・スタジアム・競技場).</li>
+  <li style="margin-left: 1.25em;">Major shrines, temples, and landmarks (神社・寺・世界遺産・国宝).</li>
+  <li><strong>Military Bases</strong></li>
+  <li style="margin-left: 1.25em;">Personnel modeled from unit composition per garrison / base.</li>
 </ul>
 <h2>License</h2>
 <p>All maps are released under the <a href="https://github.com/ahkimn/subwaybuilder-jp-maps/blob/main/LICENSE">GNU General Public License v3.0</a>.</p>
