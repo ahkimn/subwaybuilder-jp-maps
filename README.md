@@ -46,6 +46,45 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Changelog
 
+### 0.4.0 (2026-07-11)
+
+#### New Cities
+
+- `KHS` - 京阪神 (Keihanshin — the combined 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe) megaregion)
+
+#### Updated Cities
+
+- `UKB` - 神戸・姫路 (Kōbe & Himeji — now extended west to take in 姫路 (Himeji))
+- `SDJ` - 仙台 (Sendai)
+- `TOY` - 富山 (Toyama)
+- `KIJ` - 新潟 (Niigata)
+- `GAJ` - 山形 (Yamagata)
+
+#### New Features
+
+- **Refined coastal bathymetry.** Coastal seafloor depth is now modeled from real bathymetric soundings as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.
+  - The ocean-foundation layer (the seafloor a subway tunnel would pass beneath offshore) is rebuilt from the same geometry as the rendered water so the two stay consistent at every zoom.
+
+- **Expanded metropolitan boundaries.** The five updated maps use redrawn metropolitan-area boundaries with fuller commuter-shed coverage — most notably 神戸 (Kōbe), which now extends west to include 姫路 (Himeji).
+
+- **Resident and worker points snap to buildings.** Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism in dense urban blocks and industrial estates.
+
+- **Updated buildings index.** The buildings index for each map is now packaged in both `.bin` and `.json` formats, to enable compatibility with the most recent versions of the simulation engine.
+
+#### Other Features
+
+- **Removed extraneous tiles layers.** Several base map layers that are not read by the sim have been removed, reducing tile size by roughly 20% across the set of maps.
+
+- **Added compatibility for the bridges/tunnels layer.** The sim now reads a `structure` field on the road output to distinguish bridges and tunnels; the base map layer is encoded to carry that field.
+
+- **Refined water and land-use rendering.** Land use is now clipped to water, so greenery no longer paints over rivers, lakes, and coastline.
+
+#### Bugfixes
+
+- **Corrected implausible fallback building heights.** Buildings with no usable height signal previously defaulted to an oversized height and could tower over their neighbours; they now fall back to a sensible default.
+
+- **Cleaner neighborhood labels.** Administrative prefixes (大字 / 字 / 小字) are stripped from 町丁 neighborhood labels so only the salient place name is shown.
+
 ### 0.3.8 (2026-04-20)
 
 #### Updated Cities

@@ -78,6 +78,50 @@
   <li>富山 (Toyama) has a very isolated point deep in the mountains — an algorithm quirk.</li>
 </ul>
 <h2>Changelog</h2>
+<h3>0.4.0 (2026-07-11)</h3>
+<h4>New Cities</h4>
+<ul>
+  <li><code>KHS</code> - 京阪神 (Keihanshin — the combined 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe) megaregion)</li>
+</ul>
+<h4>Updated Cities</h4>
+<ul>
+  <li><code>UKB</code> - 神戸・姫路 (Kōbe &amp; Himeji — now extended west to take in 姫路 (Himeji))</li>
+  <li><code>SDJ</code> - 仙台 (Sendai)</li>
+  <li><code>TOY</code> - 富山 (Toyama)</li>
+  <li><code>KIJ</code> - 新潟 (Niigata)</li>
+  <li><code>GAJ</code> - 山形 (Yamagata)</li>
+</ul>
+<h4>New Features</h4>
+<ul>
+  <li><strong>Refined coastal bathymetry.</strong> Coastal seafloor depth is now modeled from real bathymetric soundings as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.</li>
+  <li style="margin-left: 1.25em;">The ocean-foundation layer (the seafloor a subway tunnel would pass beneath offshore) is rebuilt from the same geometry as the rendered water so the two stay consistent at every zoom.</li>
+</ul>
+<ul>
+  <li><strong>Expanded metropolitan boundaries.</strong> The five updated maps use redrawn metropolitan-area boundaries with fuller commuter-shed coverage — most notably 神戸 (Kōbe), which now extends west to include 姫路 (Himeji).</li>
+</ul>
+<ul>
+  <li><strong>Resident and worker points snap to buildings.</strong> Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism in dense urban blocks and industrial estates.</li>
+</ul>
+<ul>
+  <li><strong>Updated buildings index.</strong> The buildings index for each map is now packaged in both <code>.bin</code> and <code>.json</code> formats, to enable compatibility with the most recent versions of the simulation engine.</li>
+</ul>
+<h4>Other Features</h4>
+<ul>
+  <li><strong>Removed extraneous tiles layers.</strong> Several base map layers that are not read by the sim have been removed, reducing tile size by roughly 20% across the set of maps.</li>
+</ul>
+<ul>
+  <li><strong>Added compatibility for the bridges/tunnels layer.</strong> The sim now reads a <code>structure</code> field on the road output to distinguish bridges and tunnels; the base map layer is encoded to carry that field.</li>
+</ul>
+<ul>
+  <li><strong>Refined water and land-use rendering.</strong> Land use is now clipped to water, so greenery no longer paints over rivers, lakes, and coastline.</li>
+</ul>
+<h4>Bugfixes</h4>
+<ul>
+  <li><strong>Corrected implausible fallback building heights.</strong> Buildings with no usable height signal previously defaulted to an oversized height and could tower over their neighbours; they now fall back to a sensible default.</li>
+</ul>
+<ul>
+  <li><strong>Cleaner neighborhood labels.</strong> Administrative prefixes (大字 / 字 / 小字) are stripped from 町丁 neighborhood labels so only the salient place name is shown.</li>
+</ul>
 <h3>0.3.8 (2026-04-20)</h3>
 <h4>Updated Cities</h4>
 <ul>
