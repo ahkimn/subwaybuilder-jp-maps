@@ -11,7 +11,7 @@ Each map covers the metropolitan area (都市圏) around one or more major Japan
 - Special demand from several sources is modeled — covering airports, ports, hospitals, schools and universities, cultural attractions, and military bases. See [Special Demand Details](#special-demand-details) below for the per-category breakdown.
 - Buildings are sourced from Overture Maps, with heights back-filled from the Global Building Atlas LoD1 raster.
 - OSRM routing is included, with a scaling driving-time penalty based on commute distance and metropolitan-area size.
-- Building foundation depth (the clearance a subway tunnel needs to pass beneath) defaults to −10 m; train-related infrastructure is exempt.
+- Building foundation depth (the clearance a subway tunnel needs to pass beneath a building) is modeled per building from its height and footprint width — low-rise buildings sit at a 10 m minimum and taller, more slender buildings deepen up to an 80 m cap. Freestanding towers (broadcast / observation) and train-related infrastructure are exempt.
 
 ## High-Level Methodology
 
@@ -60,16 +60,21 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - `KIJ` - 新潟 (Niigata)
 - `GAJ` - 山形 (Yamagata)
 
-#### New Features
+- **Per-building foundation depth.** A building's foundation — the below-ground volume a subway tunnel must clear — is now modeled per building from its height and footprint width rather than a flat default; mid- and high-rise foundations deepen with height and slenderness up to an 80 m cap, while low-rise buildings sit at a 10 m minimum.
+  - Freestanding towers (broadcast / observation) are detected by their footprint slenderness and held at the minimum rather than given a deep foundation. This is the first Japanese release with modeled foundations.
 
-- **Refined coastal bathymetry.** Coastal seafloor depth is now modeled from real bathymetric soundings as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.
+- **Refined coastal bathymetry.** Coastal seafloor depth is now modeled from real bathymetric soundings (J-EGG500 and 海しる / MSIL) as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.
   - The ocean-foundation layer (the seafloor a subway tunnel would pass beneath offshore) is rebuilt from the same geometry as the rendered water so the two stay consistent at every zoom.
+
+- **Building heights refined from the Global Building Atlas.** Building heights are now back-filled from the GBA LoD1 raster across the whole fleet — Japanese OSM height tags are sparse, so the maps reworked here gain realistic per-building heights (and therefore per-building foundations and 3D extrusion) for the first time.
+
+- **Fuller land-use coverage.** Parks, forests, farmland, and other greenery are now rendered from OpenStreetMap land use, clipped to water so no greenery paints over rivers, lakes, or coastline, with building footprints subtracted so structures read cleanly against the land-use base.
 
 - **Expanded metropolitan boundaries.** The five updated maps use redrawn metropolitan-area boundaries with fuller commuter-shed coverage — most notably 神戸 (Kōbe), which now extends west to include 姫路 (Himeji).
 
 - **Resident and worker points snap to buildings.** Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism in dense urban blocks and industrial estates.
 
-- **Updated buildings index.** The buildings index for each map is now packaged in both `.bin` and `.json` formats, to enable compatibility with the most recent versions of the simulation engine.
+- **Updated buildings index.** The buildings index for each map is now packaged in both `.bin` and `.json` formats, to enable compatibility with the most recent versions of the simulation engine; the building-amalgamation pass that shrinks the index on larger maps is also refined to preserve coverage more faithfully.
 
 #### Other Features
 
@@ -77,11 +82,9 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 - **Added compatibility for the bridges/tunnels layer.** The sim now reads a `structure` field on the road output to distinguish bridges and tunnels; the base map layer is encoded to carry that field.
 
-- **Refined water and land-use rendering.** Land use is now clipped to water, so greenery no longer paints over rivers, lakes, and coastline.
+- **Areal roads.** Roads drawn as polygons in OpenStreetMap (pedestrian plazas, platforms, and similar) are now rendered as areal features rather than being dropped.
 
-#### Bugfixes
-
-- **Corrected implausible fallback building heights.** Buildings with no usable height signal previously defaulted to an oversized height and could tower over their neighbours; they now fall back to a sensible default.
+- **Revised no-signal building height.** Buildings with no usable height signal (untagged in OpenStreetMap and outside the height raster) now fall back to a sensible low-rise default instead of an oversized height that could tower over their neighbours.
 
 - **Cleaner neighborhood labels.** Administrative prefixes (大字 / 字 / 小字) are stripped from 町丁 neighborhood labels so only the salient place name is shown.
 

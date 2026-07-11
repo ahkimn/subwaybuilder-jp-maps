@@ -49,7 +49,7 @@
   <li>Special demand from several sources is modeled — covering airports, ports, hospitals, schools and universities, cultural attractions, and military bases. See <a href="#special-demand-details">Special Demand Details</a> below for the per-category breakdown.</li>
   <li>Buildings are sourced from Overture Maps, with heights back-filled from the Global Building Atlas LoD1 raster.</li>
   <li>OSRM routing is included, with a scaling driving-time penalty based on commute distance and metropolitan-area size.</li>
-  <li>Building foundation depth (the clearance a subway tunnel needs to pass beneath) defaults to −10 m; train-related infrastructure is exempt.</li>
+  <li>Building foundation depth (the clearance a subway tunnel needs to pass beneath a building) is modeled per building from its height and footprint width — low-rise buildings sit at a 10 m minimum and taller, more slender buildings deepen up to an 80 m cap. Freestanding towers (broadcast / observation) and train-related infrastructure are exempt.</li>
 </ul>
 <h2>High-Level Methodology</h2>
 <p>Resident and commuter totals are approximated from employed-persons / workers (就業者数・従業者数) counts per 小地域 (small statistical area), augmented by 500 m (labor) and 250 / 100 m (resident) meshes to achieve sub-小地域 point placement. Population counts per 小地域 are conserved, and point balancing is done through a mesh-aware (population / worker) loss function.</p>
@@ -91,10 +91,19 @@
   <li><code>KIJ</code> - 新潟 (Niigata)</li>
   <li><code>GAJ</code> - 山形 (Yamagata)</li>
 </ul>
-<h4>New Features</h4>
 <ul>
-  <li><strong>Refined coastal bathymetry.</strong> Coastal seafloor depth is now modeled from real bathymetric soundings as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.</li>
+  <li><strong>Per-building foundation depth.</strong> A building&#x27;s foundation — the below-ground volume a subway tunnel must clear — is now modeled per building from its height and footprint width rather than a flat default; mid- and high-rise foundations deepen with height and slenderness up to an 80 m cap, while low-rise buildings sit at a 10 m minimum.</li>
+  <li style="margin-left: 1.25em;">Freestanding towers (broadcast / observation) are detected by their footprint slenderness and held at the minimum rather than given a deep foundation. This is the first Japanese release with modeled foundations.</li>
+</ul>
+<ul>
+  <li><strong>Refined coastal bathymetry.</strong> Coastal seafloor depth is now modeled from real bathymetric soundings (J-EGG500 and 海しる / MSIL) as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.</li>
   <li style="margin-left: 1.25em;">The ocean-foundation layer (the seafloor a subway tunnel would pass beneath offshore) is rebuilt from the same geometry as the rendered water so the two stay consistent at every zoom.</li>
+</ul>
+<ul>
+  <li><strong>Building heights refined from the Global Building Atlas.</strong> Building heights are now back-filled from the GBA LoD1 raster across the whole fleet — Japanese OSM height tags are sparse, so the maps reworked here gain realistic per-building heights (and therefore per-building foundations and 3D extrusion) for the first time.</li>
+</ul>
+<ul>
+  <li><strong>Fuller land-use coverage.</strong> Parks, forests, farmland, and other greenery are now rendered from OpenStreetMap land use, clipped to water so no greenery paints over rivers, lakes, or coastline, with building footprints subtracted so structures read cleanly against the land-use base.</li>
 </ul>
 <ul>
   <li><strong>Expanded metropolitan boundaries.</strong> The five updated maps use redrawn metropolitan-area boundaries with fuller commuter-shed coverage — most notably 神戸 (Kōbe), which now extends west to include 姫路 (Himeji).</li>
@@ -103,7 +112,7 @@
   <li><strong>Resident and worker points snap to buildings.</strong> Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism in dense urban blocks and industrial estates.</li>
 </ul>
 <ul>
-  <li><strong>Updated buildings index.</strong> The buildings index for each map is now packaged in both <code>.bin</code> and <code>.json</code> formats, to enable compatibility with the most recent versions of the simulation engine.</li>
+  <li><strong>Updated buildings index.</strong> The buildings index for each map is now packaged in both <code>.bin</code> and <code>.json</code> formats, to enable compatibility with the most recent versions of the simulation engine; the building-amalgamation pass that shrinks the index on larger maps is also refined to preserve coverage more faithfully.</li>
 </ul>
 <h4>Other Features</h4>
 <ul>
@@ -113,11 +122,10 @@
   <li><strong>Added compatibility for the bridges/tunnels layer.</strong> The sim now reads a <code>structure</code> field on the road output to distinguish bridges and tunnels; the base map layer is encoded to carry that field.</li>
 </ul>
 <ul>
-  <li><strong>Refined water and land-use rendering.</strong> Land use is now clipped to water, so greenery no longer paints over rivers, lakes, and coastline.</li>
+  <li><strong>Areal roads.</strong> Roads drawn as polygons in OpenStreetMap (pedestrian plazas, platforms, and similar) are now rendered as areal features rather than being dropped.</li>
 </ul>
-<h4>Bugfixes</h4>
 <ul>
-  <li><strong>Corrected implausible fallback building heights.</strong> Buildings with no usable height signal previously defaulted to an oversized height and could tower over their neighbours; they now fall back to a sensible default.</li>
+  <li><strong>Revised no-signal building height.</strong> Buildings with no usable height signal (untagged in OpenStreetMap and outside the height raster) now fall back to a sensible low-rise default instead of an oversized height that could tower over their neighbours.</li>
 </ul>
 <ul>
   <li><strong>Cleaner neighborhood labels.</strong> Administrative prefixes (大字 / 字 / 小字) are stripped from 町丁 neighborhood labels so only the salient place name is shown.</li>
