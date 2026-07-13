@@ -46,7 +46,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Changelog
 
-### 0.4.0 (2026-07-11)
+### 0.4.3 (2026-07-11)
 
 #### New Cities
 
@@ -63,20 +63,20 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - **Per-building foundation depth.** A building's foundation — the below-ground volume a subway tunnel must clear — is now modeled per building from its height and footprint width rather than a flat default; mid- and high-rise foundations deepen with height and slenderness up to an 80 m cap, while low-rise buildings sit at a 10 m minimum.
   - Freestanding towers (broadcast / observation) are detected by their footprint slenderness and held at the minimum rather than given a deep foundation. This is the first Japanese release with modeled foundations.
 
-- **Refined coastal bathymetry.** Coastal seafloor depth is now modeled from real bathymetric soundings (J-EGG500 and 海しる / MSIL) as a continuous depth gradient rather than a flat shallow floor — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.
-  - The ocean-foundation layer (the seafloor a subway tunnel would pass beneath offshore) is rebuilt from the same geometry as the rendered water so the two stay consistent at every zoom.
+- **Refined coastal bathymetry.** Coastal seafloor depth is now once again modeled from real bathymetric soundings (J-EGG500) as an independently interpolated depth gradient rather than a direct port of the grid-like index — depth-banded contours are smoothed and aligned precisely to the coastline, previously-shallow cells over deep water are corrected, and harbours and reclaimed islands are filled in.
+  - The ocean-foundation layer is rebuilt from the same geometry as the rendered water so the two stay consistent at every zoom.
 
-- **Building heights refined from the Global Building Atlas.** Building heights are now back-filled from the GBA LoD1 raster across the whole fleet — Japanese OSM height tags are sparse, so the maps reworked here gain realistic per-building heights (and therefore per-building foundations and 3D extrusion) for the first time.
+- **Building heights refined from the Global Building Atlas.** Building heights are now back-filled from the GBA LoD1 raster across the whole set of Japanese maps — OSM height tags are sparse, so the maps reworked here gain realistic per-building heights (and therefore per-building foundations and 3D extrusion) for the first time.
 
-- **Fuller land-use coverage.** Parks, forests, farmland, and other greenery are now rendered from OpenStreetMap land use, clipped to water so no greenery paints over rivers, lakes, or coastline, with building footprints subtracted so structures read cleanly against the land-use base.
+- **Fuller land-use coverage.** Additional types of land cover (e.g. wetlands) are now rendered from OpenStreetMap land use, and are now precisely clipped to water so no greenery paints over rivers, lakes, or coastline, with building footprints subtracted so structures read cleanly against the land-use base.
 
 - **Expanded metropolitan boundaries.** The five updated maps use redrawn metropolitan-area boundaries with fuller commuter-shed coverage — most notably 神戸 (Kōbe), which now extends west to include 姫路 (Himeji).
 
-- **Refreshed special-demand coverage.** The five returning maps have their full special-demand set — cultural attractions, universities and schools, hospitals, ports, and more — re-curated from the ground up against prefectural and municipal statistics using the standardized attraction-demand research process. Most of these maps had not been reworked since their initial release, so this is a substantial expansion of their modeled demand beyond residence and workplace commute.
+- **Refreshed special-demand coverage.** The five returning maps have their full entertainment related special-demand set — cultural attractions, theme parks, ski resorts, and more — expanded using prefectural and municipal statistics.
 
-- **Military base demand.** Self-Defense Force installations are now modeled as demand points wherever they fall within a map's extent, with personnel estimated from unit composition per base or garrison — net-new for these maps (Sendai, Kōbe / Himeji, Niigata, Yamagata, and the Keihanshin megaregion all contain JSDF bases).
+- **Military base demand.** Self-Defense Force installations are now modeled as demand points wherever they fall within a map's extent, with personnel estimated from unit composition per base or garrison.
 
-- **Resident and worker points snap to buildings.** Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism in dense urban blocks and industrial estates.
+- **Resident and worker points snap to buildings.** Resident and workplace anchor points now snap to the nearest building footprint, aligning the Japanese maps with the placement approach already used for the European maps and improving realism, especially in sparse areas and industrial estates.
 
 - **Updated buildings index.** The buildings index for each map is now packaged in both `.bin` and `.json` formats, to enable compatibility with the most recent versions of the simulation engine; the building-amalgamation pass that shrinks the index on larger maps is also refined to preserve coverage more faithfully.
 

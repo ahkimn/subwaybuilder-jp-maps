@@ -2,6 +2,16 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.5.0",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-07-13",
+      "changelog": "Map pack update.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.3/SDJ.zip",
+      "sha256": "081e1babb18ffdfa753bff11dccdbda52239bdeee500a7bfeb06de3ad1738ae9"
+    },
+    {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
