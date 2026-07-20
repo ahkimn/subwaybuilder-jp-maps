@@ -43,22 +43,118 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - 鹿児島 (Kagoshima) has park data encoded within the ocean, due to the national park surrounding 桜島 (Sakurajima).
 - 広島 (Hiroshima) has an improbably tall building — an OSM source error.
 - 富山 (Toyama) has a very isolated point deep in the mountains — an algorithm quirk.
+- 松山 (Matsuyama) has a patch of flat, uniform sea depth near the far western edge of the map, where detailed depth data is sparse.
 
 ## Changelog
+
+### 0.4.8 (upcoming)
+
+_Skeleton — cities assigned to this cycle; full changelog on publish._
+
+#### New Cities
+
+- `KFU` - 甲府 (Kōfu)
+- `KMI` - 宮崎 (Miyazaki)
+- `MMJ` - 松本 (Matsumoto)
+- `OIT` - 大分 (Ōita)
+- `QFY` - 福山 (Fukuyama)
+- `QNG` - 長野 (Nagano)
+- `UBJ` - 山口 (Yamaguchi)
+
+### 0.4.7 (upcoming)
+
+_Skeleton — cities assigned to this cycle; full changelog on publish._
+
+#### New Cities
+
+- `AXT` - 秋田 (Akita)
+- `FKJ` - 福井 (Fukui)
+- `KMQ` - 金沢 (Kanazawa)
+- `QIS` - 水戸・日立 (Mito + Hitachi)
+- `QUT` - 宇都宮 (Utsunomiya)
+- `TKS` - 徳島 (Tokushima)
+
+### 0.4.6 (upcoming)
+
+_Skeleton — cities assigned to this cycle; full changelog on publish._
+
+#### Updated Cities
+
+- `AKJ` - 旭川 (Asahikawa)
+- `FSZ` - 静岡・浜松 (Shizuoka + Hamamatsu)
+- `HNA` - 盛岡 (Morioka)
+- `KMJ` - 熊本 (Kumamoto)
+- `KOJ` - 鹿児島 (Kagoshima)
+- `NGO` - 名古屋 (Nagoya)
+- `OKA` - 沖縄 (Okinawa)
+- `OKJ` - 岡山 (Okayama)
+- `TAK` - 高松 (Takamatsu)
+- `UKY` - 京都 (Kyōto)
+
+### 0.4.5 (2026-07-20)
+
+#### Updated Cities
+
+- `GAJ` - 山形 (Yamagata)
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe))
+- `KIJ` - 新潟 (Niigata)
+- `SDJ` - 仙台 (Sendai)
+- `TOY` - 富山 (Toyama)
+- `UKB` - 神戸・姫路 (Kōbe & Himeji)
+
+- **Incremental updates, as described in 0.4.4.** These six maps were already brought mostly up to date to the current modeling pipeline in 0.4.3, so they did not need the full rebuild the 0.4.4 cities received. This release simply brings to them the same round of incremental refinements — described in the 0.4.4 changelog below.
+
+### 0.4.4 (2026-07-17)
+
+#### Updated Cities
+
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))
+- `FUK` - 福岡 (Fukuoka)
+- `HIJ` - 広島 (Hiroshima)
+- `HKD` - 函館 (Hakodate)
+- `ITM` - 大阪 (Ōsaka)
+- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) + 松江 (Matsue) + 米子 (Yonago))
+- `KCZ` - 高知 (Kōchi)
+- `KKJ` - 北九州 (Kitakyūshū)
+- `MYJ` - 松山 (Matsuyama)
+- `NGS` - 長崎 (Nagasaki)
+- `SPK` - 札幌 (Sapporo)
+- `TTJ` - 鳥取 (Tottori)
+
+- **Refreshed onto the current modeling pipeline.** This release is most of these bundles' first refresh since 0.3.x, so the map gains everything introduced across the releases since — per-building foundation depth, coastal seafloor depth modeled from real bathymetric soundings, Global Building Atlas building heights and 3D extrusion, fuller land-use coverage, Self-Defense Force installation demand, and resident and workplace points snapped to building footprints.
+
+#### Bugfixes
+
+- **Restored coverage of coastal and island 町丁目.** 町丁目 along the 瀬戸内海 and on its islands that have administrative outlines which extend well offshore were previously dropped when the centroid of the boundary fell over water.
+  - These 町丁目 are now retained through a municipal mapping, so island villages (e.g. 大崎上島 / 江田島) and the 岩国 waterfront carry their residents and workers.
+
+- **Repaired malformed 町丁目 boundaries.** A few neighborhoods carried self-intersecting boundary data that collapsed them into tiny slivers, cramming their whole population into a fraction of the real area; the outlines are repaired so residents spread across the full neighborhood.
+
+- **Filled missing 町丁目.** A populated stretch of southern 岩国 that the source census omitted entirely is now modeled from the population and worker grids rather than left blank. A similar pattern will be applied to other missing neighborhoods in future releases.
+
+- **Corrected on-base military residents.** Self-Defense Force barracks — most visibly at 呉 — had their entire resident garrison counted as commuting residents; that institutional population is now excluded from the residential total, while the base keeps its then corrected worker and installation demand.
+
+- **Building footprints back-filled from the Global Building Atlas (GBA).** Island and rural neighborhoods where the OpenStreetMap building layer is sparse now draw upon ML footprints from GBA, so demand anchors onto modeled structures instead of collapsing onto a single point.
+
+#### Bugfixes
+
+- **Fixed over-drawn building foundations.** Building foundations were not thinned out at lower zoom levels the way their buildings are, so foundations lingered where the building itself had dropped from view — and the redundant foundations needlessly enlarged the map download. Each foundation is now drawn only where its building is.
 
 ### 0.4.3 (2026-07-11)
 
 #### New Cities
 
-- `KHS` - 京阪神 (Keihanshin — the combined 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe) megaregion)
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe))
 
 #### Updated Cities
 
-- `UKB` - 神戸・姫路 (Kōbe & Himeji — now extended west to take in 姫路 (Himeji))
+- `GAJ` - 山形 (Yamagata)
+- `KIJ` - 新潟 (Niigata)
 - `SDJ` - 仙台 (Sendai)
 - `TOY` - 富山 (Toyama)
-- `KIJ` - 新潟 (Niigata)
-- `GAJ` - 山形 (Yamagata)
+- `UKB` - 神戸・姫路 (Kōbe & Himeji — now extended west to take in 姫路 (Himeji))
 
 - **Per-building foundation depth.** A building's foundation — the below-ground volume a subway tunnel must clear — is now modeled per building from its height and footprint width rather than a flat default; mid- and high-rise foundations deepen with height and slenderness up to an 80 m cap, while low-rise buildings sit at a 10 m minimum.
   - Freestanding towers (broadcast / observation) are detected by their footprint slenderness and held at the minimum rather than given a deep foundation. This is the first Japanese release with modeled foundations.
