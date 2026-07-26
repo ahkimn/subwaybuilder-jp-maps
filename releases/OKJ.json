@@ -2,6 +2,16 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.2.0",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-07-27",
+      "changelog": "Full modeling refresh — per-building foundation depth, Global Building Atlas building heights, fuller land use, and greatly expanded cultural and entertainment demand from prefectural and municipal statistics. Metropolitan boundary extended.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.6/OKJ.zip",
+      "sha256": "42c746756d38471b2f4f7cb020d21c893b1df7352db5b8e895aaaf2c17029651"
+    },
+    {
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",

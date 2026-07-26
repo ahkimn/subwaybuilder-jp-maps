@@ -40,43 +40,89 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Known Issues
 
-- 鹿児島 (Kagoshima) has park data encoded within the ocean, due to the national park surrounding 桜島 (Sakurajima).
-- 広島 (Hiroshima) has an improbably tall building — an OSM source error.
-- 富山 (Toyama) has a very isolated point deep in the mountains — an algorithm quirk.
 - 松山 (Matsuyama) has a patch of flat, uniform sea depth near the far western edge of the map, where detailed depth data is sparse.
+- 鹿児島 (Kagoshima) — commuters on the offshore 甑島 (Koshikijima) islands, which are reachable only by ferry, show near-zero commute travel time to the mainland: the routing engine has no ferry connection, so those cross-water trips are not measured. Residents and jobs on the islands are otherwise modeled correctly. A ferry-aware routing backstop is planned.
 
 ## Changelog
 
-### 0.4.8 (upcoming)
+### 0.4.12 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
-- `KFU` - 甲府 (Kōfu)
+- `HND` - 東京 (Tokyo)
+
+- **Released on its own.** The full Greater Tokyo metropolis spans seven prefectures and tens of millions of residents; its scale and the depth of its demand modeling warrant a dedicated release.
+
+### 0.4.11 (upcoming)
+
+_Skeleton — cities assigned to this cycle; full changelog on publish._
+
+#### New Cities
+
 - `KMI` - 宮崎 (Miyazaki)
-- `MMJ` - 松本 (Matsumoto)
 - `OIT` - 大分 (Ōita)
 - `QFY` - 福山 (Fukuyama)
-- `QNG` - 長野 (Nagano)
+- `TKS` - 徳島 (Tokushima)
 - `UBJ` - 山口 (Yamaguchi)
+- `WKY` - 和歌山 (Wakayama)
 
-### 0.4.7 (upcoming)
+### 0.4.10 (upcoming)
+
+_Skeleton — cities assigned to this cycle; full changelog on publish._
+
+#### New Cities
+
+- `FJN` - 富士・沼津 (Fuji-Numazu)
+- `FKJ` - 福井 (Fukui)
+- `KFU` - 甲府 (Kōfu)
+- `KMQ` - 金沢 (Kanazawa)
+- `MMJ` - 松本 (Matsumoto)
+- `QNG` - 長野 (Nagano)
+
+### 0.4.9 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
 - `AXT` - 秋田 (Akita)
-- `FKJ` - 福井 (Fukui)
-- `KMQ` - 金沢 (Kanazawa)
+- `HHE` - 八戸 (Hachinohe)
+- `MBS` - 前橋 (Maebashi)
 - `QIS` - 水戸・日立 (Mito + Hitachi)
 - `QUT` - 宇都宮 (Utsunomiya)
-- `TKS` - 徳島 (Tokushima)
 
-### 0.4.6 (upcoming)
+### 0.4.8 (upcoming)
 
-_Skeleton — cities assigned to this cycle; full changelog on publish._
+_Skeleton — full changelog on publish._
+
+#### Updated Cities
+
+- `NGO` - 名古屋 (Nagoya)
+
+- **Refreshed onto the current modeling pipeline.** 名古屋's first full rebuild since 0.3.4, so the map gains everything introduced across the releases since — per-building foundation depth, Global Building Atlas building heights and 3D extrusion, fuller land-use coverage clipped cleanly to water, Self-Defense Force installation demand, and resident and workplace points snapped to building footprints.
+
+- **Substantially expanded cultural and entertainment demand.** The full special-demand set across the 名古屋 metropolitan area, is rebuilt from prefectural and municipal visitor statistics: cultural attractions, theme parks, shrines and temples, hot-spring towns, stadiums and arenas, and more, each weighted to real visitor counts.
+
+- **Expanded metropolitan boundaries.** The 名古屋 map is redrawn with substantially wider metropolitan extents, extending to include 豊橋市 and its surroundings as well as the capital of 三重県,　津市.
+
+### 0.4.7 (2026-07-26)
+
+#### Updated Cities
+
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
+- `HIJ` - 広島 (Hiroshima)
+- `HKD` - 函館 (Hakodate)
+- `KCZ` - 高知 (Kōchi)
+- `MYJ` - 松山 (Matsuyama)
+- `NGS` - 長崎 (Nagasaki)
+- `SPK` - 札幌 (Sapporo)
+
+- **Corrected military installation placement and workforce.** Self-Defense Force and allied installations that had been positioned from previously approximated coordinates are moved to precise geocoded locations, so each base's demand anchors where it belongs. At the larger US installations — most notably 岩国 (Iwakuni) — the modeled on-base workforce is expanded to reflect full uniformed and civilian staffing rather than the local base-employee (LMO) count alone.
+
+### 0.4.6 (2026-07-26)
 
 #### Updated Cities
 
@@ -85,11 +131,16 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `HNA` - 盛岡 (Morioka)
 - `KMJ` - 熊本 (Kumamoto)
 - `KOJ` - 鹿児島 (Kagoshima)
-- `NGO` - 名古屋 (Nagoya)
 - `OKA` - 沖縄 (Okinawa)
 - `OKJ` - 岡山 (Okayama)
 - `TAK` - 高松 (Takamatsu)
 - `UKY` - 京都 (Kyōto)
+
+- **Refreshed onto the current modeling pipeline.** This is these maps' first full rebuild since 0.3.x, so each gains everything introduced across the releases since — per-building foundation depth, coastal seafloor depth modeled from real bathymetric soundings, Global Building Atlas building heights and 3D extrusion, fuller land-use coverage clipped cleanly to water, Self-Defense Force installation demand, and resident and workplace points snapped to building footprints.
+
+- **Substantially expanded cultural and entertainment demand.** Each map's full special-demand set — cultural attractions, theme parks, ski resorts, shrines and temples, hot-spring towns, stadiums and arenas, and more — is expanded from prefectural and municipal visitor statistics.
+
+- **Expanded metropolitan boundaries.** 盛岡, 旭川, 鹿児島, and 熊本 are redrawn with substantially wider metropolitan extents and much fuller commuter-shed coverage; 沖縄, 岡山, 高松, and 京都 receive smaller incremental extensions.
 
 ### 0.4.5 (2026-07-20)
 
