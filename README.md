@@ -93,9 +93,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `QIS` - 水戸・日立 (Mito + Hitachi)
 - `QUT` - 宇都宮 (Utsunomiya)
 
-### 0.4.8 (upcoming)
-
-_Skeleton — full changelog on publish._
+### 0.4.8 (2026-07-27)
 
 #### Updated Cities
 
