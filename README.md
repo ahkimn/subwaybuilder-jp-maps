@@ -51,16 +51,6 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
-- `HND` - 東京 (Tokyo)
-
-- **Released on its own.** The full Greater Tokyo metropolis spans seven prefectures and tens of millions of residents; its scale and the depth of its demand modeling warrant a dedicated release.
-
-### 0.4.11 (upcoming)
-
-_Skeleton — cities assigned to this cycle; full changelog on publish._
-
-#### New Cities
-
 - `KMI` - 宮崎 (Miyazaki)
 - `OIT` - 大分 (Ōita)
 - `QFY` - 福山 (Fukuyama)
@@ -68,7 +58,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `UBJ` - 山口 (Yamaguchi)
 - `WKY` - 和歌山 (Wakayama)
 
-### 0.4.10 (upcoming)
+### 0.4.11 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
@@ -81,7 +71,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `MMJ` - 松本 (Matsumoto)
 - `QNG` - 長野 (Nagano)
 
-### 0.4.9 (upcoming)
+### 0.4.10 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
@@ -92,6 +82,30 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `MBS` - 前橋 (Maebashi)
 - `QIS` - 水戸・日立 (Mito + Hitachi)
 - `QUT` - 宇都宮 (Utsunomiya)
+
+### 0.4.9 (upcoming)
+
+#### Updated Cities
+
+- `NGO` - 名古屋 (Nagoya)
+- `ITM` - 大阪 (Ōsaka)
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))
+
+#### New Cities
+
+- `HND` - 東京 (Tokyo)
+
+- **Reworked how commuters are matched to workplaces.** The previous assignment algorithm drew workplaces as a random sample from the commute model, and attempted to iteratively converge to the measured census matrix. This sometimes left sampling discrepancies in district-to-district commute totals and noticeably different mixes of short- and long-distance commutes in neighboring areas. The algorithm is now now deterministic: it reproduces the census commute totals between districts exactly, and it distributes commute distances evenly across each municipality, so neighboring areas show consistent patterns instead of arbitrary block-to-block variation.
+
+- **More accurate geometry and lighter map tiles.** All JP maps (unlike EU/TW) previously measured their shapes in Web Mercator, which stretches distances and areas at Japan's latitude; each map is now measured in a projection tuned to its own location. The result is a more faithful execution of the tile processing steps, leading to... for the biggest metros especially — noticeably smaller packaged tiles.
+
+- **Trimmed hidden weight from the download.** Building foundations are no longer generated at z=12 where the simulation never draws them, the buildings index now more aggressively prunes small building footprints, and the cosmetic driving-route lines are removed from the demand data for these large metro areas.
+
+- **Maps now load at a wider view.** Each map opens zoomed out to show a fuller scale on first load, instead of zoomed in to the immediate area around the population centre.
+
+- **東京 (Tokyo) is released for the first time.** The full Greater Tokyo metropolis, encompassing parts of seven different prefectures, and covering a region of ~38 million people, joins the collection. It is built with the same commute, workplace, building-height, land-use, and coastal-depth modeling as the other maps.
+  - **Cultural and entertainment demand is not yet fully developed.** 東京's residential and workplace demand is complete, but the curated set of special-demand destinations such as museums, theme parks, shrines and temples, stadiums, etc. is not complete.
 
 ### 0.4.8 (2026-07-27)
 
