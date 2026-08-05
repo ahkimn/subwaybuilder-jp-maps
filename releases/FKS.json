@@ -2,6 +2,16 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.2.2",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-08-05",
+      "changelog": "Reworked commuter-to-workplace matching — now reproduces census commute totals between districts exactly and evens out block-to-block variation within each city. Resident and job placement evened out across medium-density neighborhoods. Map geometry recomputed in the map's local projection for more accurate shapes and smaller tiles, with a lighter download and a wider default initial view.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/FKS.zip",
+      "sha256": "042b5f914673c00b2bacbd7cd417c02f9b84291097f7716fa91b4dc036614391"
+    },
+    {
       "version": "0.2.1",
       "min_game_version": ">=1.0.0",
       "max_game_version": null,

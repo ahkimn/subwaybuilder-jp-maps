@@ -45,7 +45,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Changelog
 
-### 0.4.12 (upcoming)
+### 0.4.13 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
@@ -58,7 +58,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `UBJ` - 山口 (Yamaguchi)
 - `WKY` - 和歌山 (Wakayama)
 
-### 0.4.11 (upcoming)
+### 0.4.12 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
@@ -71,7 +71,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `MMJ` - 松本 (Matsumoto)
 - `QNG` - 長野 (Nagano)
 
-### 0.4.10 (upcoming)
+### 0.4.11 (upcoming)
 
 _Skeleton — cities assigned to this cycle; full changelog on publish._
 
@@ -83,7 +83,46 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 - `QIS` - 水戸・日立 (Mito + Hitachi)
 - `QUT` - 宇都宮 (Utsunomiya)
 
-### 0.4.9 (upcoming)
+### 0.4.10 (2026-08-05)
+
+#### Updated Cities
+
+- `AKJ` - 旭川 (Asahikawa)
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
+- `FSZ` - 静岡・浜松 (Shizuoka + Hamamatsu)
+- `FUK` - 福岡 (Fukuoka)
+- `GAJ` - 山形 (Yamagata)
+- `HIJ` - 広島 (Hiroshima)
+- `HKD` - 函館 (Hakodate)
+- `HNA` - 盛岡 (Morioka)
+- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) + 松江 (Matsue) + 米子 (Yonago))
+- `KCZ` - 高知 (Kōchi)
+- `KIJ` - 新潟 (Niigata)
+- `KKJ` - 北九州 (Kitakyūshū)
+- `KMJ` - 熊本 (Kumamoto)
+- `KOJ` - 鹿児島 (Kagoshima)
+- `MYJ` - 松山 (Matsuyama)
+- `NGS` - 長崎 (Nagasaki)
+- `OKA` - 沖縄 (Okinawa)
+- `OKJ` - 岡山 (Okayama)
+- `SDJ` - 仙台 (Sendai)
+- `SHB` - 根室 (Nemuro)
+- `SPK` - 札幌 (Sapporo)
+- `TAK` - 高松 (Takamatsu)
+- `TOY` - 富山 (Toyama)
+- `TTJ` - 鳥取 (Tottori)
+- `UKB` - 神戸・姫路 (Kōbe & Himeji)
+- `UKY` - 京都 (Kyōto)
+- `WKJ` - 稚内 (Wakkanai)
+
+- **Refreshed onto the modeling improvements introduced in 0.4.9.** These maps adopt the changes made for the five larger maps in the previous release. Commuters are now matched to their workplaces deterministically; the commute totals between districts reproduce the census exactly, and neighboring areas show consistent commute patterns instead of arbitrary block-to-block variation. Each map's geometry is now measured in a projection tuned to its own location, giving more faithful shapes across the map and noticeably smaller map tiles.
+
+- **More even resident and workplace point placement.** The curve that spaces demand points across a map was smoothed to remove a trough at middle densities, so suburban and mid-density neighborhoods no longer appear sparse in demand points.
+
+- **Maps now load at a wider view.** Each map opens zoomed out to show a fuller scale on first load, instead of zoomed in to the immediate area around the population centre.
+
+### 0.4.9 (2026-08-04)
 
 #### Updated Cities
 
@@ -94,7 +133,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
-- `HND` - 東京 (Tokyo)
+- `HND` - 東京 (Tōkyō)
 
 - **Reworked how commuters are matched to workplaces.** The previous assignment algorithm drew workplaces as a random sample from the commute model, and attempted to iteratively converge to the measured census matrix. This sometimes left sampling discrepancies in district-to-district commute totals and noticeably different mixes of short- and long-distance commutes in neighboring areas. The algorithm is now now deterministic: it reproduces the census commute totals between districts exactly, and it distributes commute distances evenly across each municipality, so neighboring areas show consistent patterns instead of arbitrary block-to-block variation.
 
