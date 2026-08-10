@@ -91,7 +91,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - `IZO` - 中海 (Nakaumi — 出雲 (Izumo) & 松江 (Matsue) & 米子 (Yonago))
 - `KCZ` - 高知 (Kōchi)
 - `KIJ` - 新潟 (Niigata)
-- `KKJ` - 北九州 (Kitakyūshū)
+- `KKJ` - 北九州・下関 (Kitakyūshū & Shimonoseki)
 - `KMJ` - 熊本 (Kumamoto)
 - `KOJ` - 鹿児島 (Kagoshima)
 - `MYJ` - 松山 (Matsuyama)
@@ -211,7 +211,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - `ITM` - 大阪 (Ōsaka)
 - `IZO` - 中海 (Nakaumi — 出雲 (Izumo) & 松江 (Matsue) & 米子 (Yonago))
 - `KCZ` - 高知 (Kōchi)
-- `KKJ` - 北九州 (Kitakyūshū)
+- `KKJ` - 北九州・下関 (Kitakyūshū & Shimonoseki)
 - `MYJ` - 松山 (Matsuyama)
 - `NGS` - 長崎 (Nagasaki)
 - `SPK` - 札幌 (Sapporo)
@@ -289,7 +289,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - `ITM` - 大阪 (Ōsaka)
 - `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) & 北九州 (Kitakyūshū))
 - `FUK` - 福岡 (Fukuoka)
-- `KKJ` - 北九州 (Kitakyūshū)
+- `KKJ` - 北九州・下関 (Kitakyūshū & Shimonoseki)
 
 #### New Features
 
@@ -349,7 +349,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 - `FUK` - 福岡 (Fukuoka)
 - `HKD` - 函館 (Hakodate)
-- `KKJ` - 北九州 (Kitakyūshū)
+- `KKJ` - 北九州・下関 (Kitakyūshū & Shimonoseki)
 - `IZO` - 中海 (Nakaumi)
 - `AKJ` - 旭川 (Asahikawa)
 - `AOJ` - 津軽 (Tsugaru)
@@ -490,7 +490,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 - `KCZ` - 高知 (Kōchi)
 - `KIJ` - 新潟 (Niigata)
-- `KKJ` - 北九州 (Kitakyūshū)
+- `KKJ` - 北九州・下関 (Kitakyūshū & Shimonoseki)
 - `OKA` - 沖縄 (Okinawa)
 - `UKY` - 京都 (Kyōto)
 
