@@ -7,7 +7,7 @@
       "max_game_version": null,
       "game_version": ">1.3.0",
       "date": "2026-08-05",
-      "changelog": "Reworked commuter-to-workplace matching — now reproduces census commute totals between districts exactly and evens out block-to-block variation within each city. Map geometry recomputed in each map's local projection for more accurate shapes and smaller tiles, with a lighter download and a wider default initial view.",
+      "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly; recomputed map geometry in the map's local projection for accurate shapes and a lighter download.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.9/ITM.zip",
       "sha256": "ae4bf478ded563eff7b22dd080c581ff752e61b10fc3a77b7579aee3e959538c"
     },
@@ -17,7 +17,7 @@
       "max_game_version": null,
       "game_version": ">1.3.0",
       "date": "2026-07-21",
-      "changelog": "Map pack update.",
+      "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/ITM.zip",
       "sha256": "087d8ee888b55da612ed52ab0ec1e087b16e7149e53c44e2644e592f8c8604d0"
     },
@@ -25,7 +25,7 @@
       "version": "0.2.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-21",
-      "changelog": "Map pack update.",
+      "changelog": "Added military-base demand and expanded special-demand and point seeding for the Ōsaka and Fukuoka maps.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.8/ITM.zip",
       "sha256": "de00e8e2fdf1ee9f37f7d15732ecde5ae0d99e126a9ca0f705441e224d2b2501"
     },
@@ -33,7 +33,7 @@
       "version": "0.1.3",
       "game_version": ">=1.2.0",
       "date": "2026-04-08",
-      "changelog": "Added ocean index for bathymetry and updated buildings / neighborhood labels",
+      "changelog": "Switched to Overture building data and stitched buildings and water into tiles for lighter rendering.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.4/ITM.zip",
       "sha256": "22ac8be9d3ee3f1f4ea9db9a5b11f88523c54885bb99ef030c057c6ff9729348"
     },
@@ -41,7 +41,7 @@
       "version": "0.1.2",
       "game_version": ">=1.2.0",
       "date": "2026-03-27",
-      "changelog": "Further demand data pruning",
+      "changelog": "Trimmed demand-data size for lighter, smoother maps.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.2/ITM.zip",
       "sha256": "c31a2018c5dbcc8de60272b4ea47ed3be184e16b0b7af450b70bc8dbc0029cad"
     },
@@ -49,7 +49,7 @@
       "version": "0.1.1",
       "game_version": ">=1.2.0",
       "date": "2026-03-26",
-      "changelog": "Reduced buildings index size",
+      "changelog": "Reduced the buildings download size and pruned tiny building fragments.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.1/ITM.zip",
       "sha256": "896ec40f84f60bffb626fab97ac6e715617c543f934823189377cb60743f83a9"
     },
@@ -57,7 +57,7 @@
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
-      "changelog": "New in 0.3.0",
+      "changelog": "Initial release of the Ōsaka map with census-based residents and workers, commute demand, and university, zoo, aquarium, and school demand.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/ITM.zip",
       "sha256": "79265f09c8c0a855e22e17d40487d3f59c14b247ecdef530b835871c7b9c9a33"
     }

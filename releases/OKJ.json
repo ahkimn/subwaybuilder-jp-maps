@@ -7,7 +7,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
-      "changelog": "Reworked commuter-to-workplace matching — now reproduces census commute totals between districts exactly and evens out block-to-block variation within each city. Resident and job placement evened out across medium-density neighborhoods. Map geometry recomputed in the map's local projection for more accurate shapes and smaller tiles, with a lighter download and a wider default initial view.",
+      "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/OKJ.zip",
       "sha256": "595e115b2d5dc07b77305152ef9f4095aebd408b1465edeba511d2b005c2b25b"
     },
@@ -17,7 +17,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
-      "changelog": "Full modeling refresh — per-building foundation depth, Global Building Atlas building heights, fuller land use, and greatly expanded cultural and entertainment demand from prefectural and municipal statistics. Metropolitan boundary extended.",
+      "changelog": "Full modeling refresh — per-building foundation depth, Global Building Atlas heights, fuller land use, and greatly expanded cultural and entertainment demand; metropolitan boundary widened.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.6/OKJ.zip",
       "sha256": "42c746756d38471b2f4f7cb020d21c893b1df7352db5b8e895aaaf2c17029651"
     },
@@ -25,7 +25,7 @@
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
-      "changelog": "New in 0.3.0",
+      "changelog": "Initial release of the Okayama map with census-based residents and workers, commute demand, and university, zoo, aquarium, and school demand.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKJ.zip",
       "sha256": "3c73cddf79484ff09304f9fad1023b167f94080509134aa168b65977816b13de"
     }

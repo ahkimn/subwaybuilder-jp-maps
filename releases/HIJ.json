@@ -7,7 +7,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
-      "changelog": "Reworked commuter-to-workplace matching — now reproduces census commute totals between districts exactly and evens out block-to-block variation within each city. Resident and job placement evened out across medium-density neighborhoods. Map geometry recomputed in the map's local projection for more accurate shapes and smaller tiles, with a lighter download and a wider default initial view. The two westernmost offshore tiles have been trimmed.",
+      "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view. The two westernmost offshore tiles have been trimmed.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/HIJ.zip",
       "sha256": "b003924bb5bbcdbabb1b04a64338193782964d00f2eefae60cddbef6684b9a4b"
     },
@@ -17,7 +17,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
-      "changelog": "Military and Self-Defense Force installations repositioned to precise geocoded locations. The Iwakuni base's on-base workforce expanded to reflect full uniformed and civilian staffing.",
+      "changelog": "Repositioned military and Self-Defense Force installations to precise geocoded locations.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.7/HIJ.zip",
       "sha256": "ef4f0892d9e82181191849da235977de8ea9445c0388ea5bd8961ae2ba14bca4"
     },
@@ -27,7 +27,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
-      "changelog": "Map pack update.",
+      "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/HIJ.zip",
       "sha256": "be6d545a9fc2bfd8c9f781b720337fa4089e72f9ce18891358420a6df1108ec2"
     },
@@ -35,7 +35,7 @@
       "version": "0.5.0",
       "game_version": ">=1.2.0",
       "date": "2026-04-05",
-      "changelog": "Expanded to include 東広島・岩国 (Higashihiroshima & Iwakuni) as well as bathymetric data and cultural attraction special demand",
+      "changelog": "Added custom attraction demand and coastal ocean bathymetry.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.3/HIJ.zip",
       "sha256": "a204ba5bc0e851295b0ff5e09e4560cd5697d0337b89c62d11745ff42e64476d"
     },
@@ -43,7 +43,7 @@
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
-      "changelog": "Map pack update.",
+      "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/HIJ.zip",
       "sha256": "06e5568a7ac3427f791e6473d2094d799c1b1c531dd5e31047870262ffcb6c4f"
     },
@@ -51,7 +51,7 @@
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
-      "changelog": "Map pack update.",
+      "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/HIJ.zip",
       "sha256": "11eadf4fb9cab9135c37328d6ddf8a78de1ed7989ea6feb81469cd6aaaf2bb8b"
     },
@@ -59,7 +59,7 @@
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
-      "changelog": "Contains 呉 (Kure)",
+      "changelog": "Initial release of the Hiroshima map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/HIJ.zip",
       "sha256": "108d0672fc073ec9fe070df48797ad76589ca5482e1ca8e5d40f246b4c72c9aa"
     }

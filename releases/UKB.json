@@ -7,7 +7,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
-      "changelog": "Reworked commuter-to-workplace matching — now reproduces census commute totals between districts exactly and evens out block-to-block variation within each city. Resident and job placement evened out across medium-density neighborhoods. Map geometry recomputed in the map's local projection for more accurate shapes and smaller tiles, with a lighter download and a wider default initial view.",
+      "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/UKB.zip",
       "sha256": "d34ff1b30c9ac1fbd5075bf1b372002a5f305be5e2046bcf8431bf4e1956aae5"
     },
@@ -17,7 +17,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
-      "changelog": "Map pack update.",
+      "changelog": "Restored dropped coastal and island neighborhoods, thinned over-drawn building foundations, and back-filled sparse building footprints.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.5/UKB.zip",
       "sha256": "26ba1deaa0f97b9d3a3ddfc14e5bf3b9ec7893b11cc2e6df26cb6832ab396c55"
     },
@@ -27,7 +27,7 @@
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-07-13",
-      "changelog": "Map pack update.",
+      "changelog": "Added per-building foundation depth, Global Building Atlas heights and 3D buildings, fuller land use, and military demand; widened metropolitan boundaries.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.3/UKB.zip",
       "sha256": "9982f60c54e7459f4a1c111c7d289e81bc7871ffe73ecabcb9c60f1f46a129ec"
     },
@@ -35,7 +35,7 @@
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
-      "changelog": "Map pack update.",
+      "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/UKB.zip",
       "sha256": "7b8422def7a952cfd26ac2e3d2fc13dd6d7317b87f15b979bff1e4d7611aec4e"
     },
@@ -43,7 +43,7 @@
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
-      "changelog": "Fixed corrupted buildings_index.json",
+      "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/UKB.zip",
       "sha256": "ad55da1e043182e3ef8f5ebee2e3a6a4c0df921c26bd7054c39e090b22061b70"
     },
@@ -51,7 +51,7 @@
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
-      "changelog": "Map pack update.",
+      "changelog": "Initial release of the Kōbe & Himeji map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/UKB.zip",
       "sha256": "12e4453bbe40190125dab98375bf9818609175b232c0e1a9e7f428aeb3a4d862"
     }
