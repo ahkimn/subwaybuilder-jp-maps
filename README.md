@@ -45,58 +45,50 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Changelog
 
-### 0.4.13 (upcoming)
-
-_Skeleton — cities assigned to this cycle; full changelog on publish._
-
-#### New Cities
-
-- `KMI` - 宮崎 (Miyazaki)
-- `OIT` - 大分 (Ōita)
-- `QFY` - 福山 (Fukuyama)
-- `TKS` - 徳島 (Tokushima)
-- `UBJ` - 山口 (Yamaguchi)
-- `WKY` - 和歌山 (Wakayama)
-
-### 0.4.12 (upcoming)
-
-_Skeleton — cities assigned to this cycle; full changelog on publish._
-
-#### New Cities
-
-- `FJN` - 富士・沼津 (Fuji-Numazu)
-- `FKJ` - 福井 (Fukui)
-- `KFU` - 甲府 (Kōfu)
-- `KMQ` - 金沢 (Kanazawa)
-- `MMJ` - 松本 (Matsumoto)
-- `QNG` - 長野 (Nagano)
-
 ### 0.4.11 (upcoming)
-
-_Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
 - `AXT` - 秋田 (Akita)
+- `FJN` - 富士・沼津 (Fuji & Numazu)
+- `FKJ` - 福井 (Fukui)
 - `HHE` - 八戸 (Hachinohe)
+- `KFU` - 甲府 (Kōfu)
+- `KMI` - 宮崎 (Miyazaki)
+- `KMQ` - 金沢 (Kanazawa)
 - `MBS` - 前橋 (Maebashi)
-- `QIS` - 水戸・日立 (Mito + Hitachi)
+- `MMJ` - 松本 (Matsumoto)
+- `OIT` - 大分 (Ōita)
+- `QFY` - 福山 (Fukuyama)
+- `QIS` - 水戸・日立 (Mito & Hitachi)
+- `QNG` - 長野 (Nagano)
 - `QUT` - 宇都宮 (Utsunomiya)
+- `TKS` - 徳島 (Tokushima)
+- `UBJ` - 山口 (Yamaguchi)
+- `WKY` - 和歌山 (Wakayama)
+
+- **Seventeen new maps join the collection.** This will be the final set of maps for this pack, consisting of prefectural capitals and regional hubs from Tōhoku down through Kyūshū. Each is built with the full current modeling pipeline as described in previous Channgelog entries.
+  - **Cultural and entertainment demand is not yet fully developed.** Each map's residential and workplace demand is complete, but the curated set of special-demand destinations — museums, theme parks, shrines and temples, stadiums, etc. — is incomplete and may be added in a future update.
+
+#### Other Features
+
+- **Regional boundary overlays now ship with the maps.** Maps now include their own municipal (市町村) and neighborhood (大字) boundary data, so the Regions mod can draw administrative regions straight from the installed map with no separate download. This is a packaging addition only; the simulation and its demand modeling are unchanged.
+- **Driving routes now load from a companion file.** The per-trip driving-route lines (the polylines that trace each commute) are no longer included within the main demand data. The newest version of Railyard (0.2.10) will enable loads on demand, keeping the demand data that is required in memory lean and serving a route only when it is shown to the user.
 
 ### 0.4.10 (2026-08-05)
 
 #### Updated Cities
 
 - `AKJ` - 旭川 (Asahikawa)
-- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
-- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
-- `FSZ` - 静岡・浜松 (Shizuoka + Hamamatsu)
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) & 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) & 郡山 (Kōriyama))
+- `FSZ` - 静岡・浜松 (Shizuoka & Hamamatsu)
 - `FUK` - 福岡 (Fukuoka)
 - `GAJ` - 山形 (Yamagata)
 - `HIJ` - 広島 (Hiroshima)
 - `HKD` - 函館 (Hakodate)
 - `HNA` - 盛岡 (Morioka)
-- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) + 松江 (Matsue) + 米子 (Yonago))
+- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) & 松江 (Matsue) & 米子 (Yonago))
 - `KCZ` - 高知 (Kōchi)
 - `KIJ` - 新潟 (Niigata)
 - `KKJ` - 北九州 (Kitakyūshū)
@@ -128,8 +120,8 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 - `NGO` - 名古屋 (Nagoya)
 - `ITM` - 大阪 (Ōsaka)
-- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe))
-- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) & 大阪 (Ōsaka) & 神戸 (Kōbe))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) & 北九州 (Kitakyūshū))
 
 #### New Cities
 
@@ -162,8 +154,8 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### Updated Cities
 
-- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
-- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) & 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) & 郡山 (Kōriyama))
 - `HIJ` - 広島 (Hiroshima)
 - `HKD` - 函館 (Hakodate)
 - `KCZ` - 高知 (Kōchi)
@@ -178,7 +170,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 #### Updated Cities
 
 - `AKJ` - 旭川 (Asahikawa)
-- `FSZ` - 静岡・浜松 (Shizuoka + Hamamatsu)
+- `FSZ` - 静岡・浜松 (Shizuoka & Hamamatsu)
 - `HNA` - 盛岡 (Morioka)
 - `KMJ` - 熊本 (Kumamoto)
 - `KOJ` - 鹿児島 (Kagoshima)
@@ -198,7 +190,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 #### Updated Cities
 
 - `GAJ` - 山形 (Yamagata)
-- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe))
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) & 大阪 (Ōsaka) & 神戸 (Kōbe))
 - `KIJ` - 新潟 (Niigata)
 - `SDJ` - 仙台 (Sendai)
 - `TOY` - 富山 (Toyama)
@@ -210,14 +202,14 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### Updated Cities
 
-- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
-- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
-- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) & 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) & 郡山 (Kōriyama))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) & 北九州 (Kitakyūshū))
 - `FUK` - 福岡 (Fukuoka)
 - `HIJ` - 広島 (Hiroshima)
 - `HKD` - 函館 (Hakodate)
 - `ITM` - 大阪 (Ōsaka)
-- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) + 松江 (Matsue) + 米子 (Yonago))
+- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) & 松江 (Matsue) & 米子 (Yonago))
 - `KCZ` - 高知 (Kōchi)
 - `KKJ` - 北九州 (Kitakyūshū)
 - `MYJ` - 松山 (Matsuyama)
@@ -248,7 +240,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
-- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) + 大阪 (Ōsaka) + 神戸 (Kōbe))
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) & 大阪 (Ōsaka) & 神戸 (Kōbe))
 
 #### Updated Cities
 
@@ -295,7 +287,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 #### Updated Cities
 
 - `ITM` - 大阪 (Ōsaka)
-- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) & 北九州 (Kitakyūshū))
 - `FUK` - 福岡 (Fukuoka)
 - `KKJ` - 北九州 (Kitakyūshū)
 
@@ -348,7 +340,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 
 #### New Cities
 
-- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) + 北九州 (Kitakyūshū))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) & 北九州 (Kitakyūshū))
 - `HNA` - 盛岡 (Morioka)
 - `KMJ` - 熊本 (Kumamoto)
 - `TTJ` - 鳥取 (Tottori)
@@ -399,9 +391,9 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 #### New Cities
 
 - `AKJ` - 旭川 (Asahikawa)
-- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) + 弘前 (Hirosaki))
-- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) + 郡山 (Kōriyama))
-- `FSZ` - 静岡・浜松 (Shizuoka + Hamamatsu)
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) & 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) & 郡山 (Kōriyama))
+- `FSZ` - 静岡・浜松 (Shizuoka & Hamamatsu)
 
 #### Updated Cities
 
@@ -476,7 +468,7 @@ _Skeleton — cities assigned to this cycle; full changelog on publish._
 #### New Cities
 
 - `HKD` - 函館 (Hakodate)
-- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) + 松江 (Matsue) + 米子 (Yonago))
+- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) & 松江 (Matsue) & 米子 (Yonago))
 - `NGS` - 長崎 (Nagasaki)
 - `TAK` - 高松 (Takamatsu)
 - `TOY` - 富山 (Toyama)
