@@ -45,7 +45,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Changelog
 
-### 0.4.11 (upcoming)
+### 0.4.11 (2026-08-10)
 
 #### New Cities
 
@@ -67,8 +67,8 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - `UBJ` - 山口 (Yamaguchi)
 - `WKY` - 和歌山 (Wakayama)
 
-- **Seventeen new maps join the collection.** This will be the final set of maps for this pack, consisting of prefectural capitals and regional hubs from Tōhoku down through Kyūshū. Each is built with the full current modeling pipeline as described in previous Channgelog entries.
-  - **Cultural and entertainment demand is not yet fully developed.** Each map's residential and workplace demand is complete, but the curated set of special-demand destinations — museums, theme parks, shrines and temples, stadiums, etc. — is incomplete and may be added in a future update.
+- **Seventeen new maps join the collection.** This will be the final set of maps for this pack, consisting of prefectural capitals and regional hubs from Tōhoku all the way to Kyūshū. Each is built with the full current modeling pipeline as described in previous Changelog entries.
+  - **Cultural and entertainment demand is not complete.** Each map's residential and workplace demand is complete, but the set of special-demand destinations — museums, theme parks, shrines and temples, stadiums, etc. — is incomplete and may be added in a future update.
 
 #### Other Features
 
