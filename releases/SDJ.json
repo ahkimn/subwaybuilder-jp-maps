@@ -2,6 +2,16 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.5.3",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-08-12",
+      "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/SDJ.zip",
+      "sha256": "7cd6b1d8d57e25318cacf6fda493591b93d2b2095b5b7e5dc53626eed70798dc"
+    },
+    {
       "version": "0.5.2",
       "min_game_version": ">=1.0.0",
       "max_game_version": null,

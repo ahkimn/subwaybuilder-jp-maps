@@ -2,6 +2,16 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.4.2",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-08-12",
+      "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/IZO.zip",
+      "sha256": "cb1e876a8fa0c745af77a02bafe4b0279a4cca983a12b3b73fa062a9941e8613"
+    },
+    {
       "version": "0.4.1",
       "min_game_version": ">=1.0.0",
       "max_game_version": null,

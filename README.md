@@ -45,6 +45,77 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 
 ## Changelog
 
+### 0.4.13 (Unreleased)
+
+#### Updated Cities
+
+- `AXT` - 秋田 (Akita)
+- `FJN` - 富士・沼津 (Fuji & Numazu)
+- `FKJ` - 福井 (Fukui)
+- `HHE` - 八戸 (Hachinohe)
+- `HND` - 東京 (Tōkyō)
+- `KFU` - 甲府 (Kōfu)
+- `KMI` - 宮崎 (Miyazaki)
+- `KMQ` - 金沢 (Kanazawa)
+- `MBS` - 前橋 (Maebashi)
+- `MMJ` - 松本 (Matsumoto)
+- `OIT` - 大分 (Ōita)
+- `QFY` - 福山 (Fukuyama)
+- `QIS` - 水戸・日立 (Mito & Hitachi)
+- `QNG` - 長野 (Nagano)
+- `QUT` - 宇都宮 (Utsunomiya)
+- `TKS` - 徳島 (Tokushima)
+- `UBJ` - 山口 (Yamaguchi)
+- `WKY` - 和歌山 (Wakayama)
+
+#### New Features
+
+- **Cultural and attraction special demand added.** These maps launched with residential, workplace, and institutional demand but without a complete set of cultural destinations; they now model their museums, theme parks, shrines and temples, stadiums, and other visitor attractions as special-demand points.
+
+### 0.4.12 (2026-08-11)
+
+#### Updated Cities
+
+- `AKJ` - 旭川 (Asahikawa)
+- `AOJ` - 津軽 (Tsugaru — 青森 (Aomori) & 弘前 (Hirosaki))
+- `FKS` - 中通り (Nakadōri — 福島 (Fukushima) & 郡山 (Kōriyama))
+- `FOKK` - 福北 (Fukuhoku — 福岡 (Fukuoka) & 北九州 (Kitakyūshū))
+- `FSZ` - 静岡・浜松 (Shizuoka & Hamamatsu)
+- `FUK` - 福岡 (Fukuoka)
+- `GAJ` - 山形 (Yamagata)
+- `HIJ` - 広島 (Hiroshima)
+- `HKD` - 函館 (Hakodate)
+- `HNA` - 盛岡 (Morioka)
+- `HND` - 東京 (Tōkyō)
+- `ITM` - 大阪 (Ōsaka)
+- `IZO` - 中海 (Nakaumi — 出雲 (Izumo) & 松江 (Matsue) & 米子 (Yonago))
+- `KCZ` - 高知 (Kōchi)
+- `KHS` - 京阪神 (Keihanshin — 京都 (Kyōto) & 大阪 (Ōsaka) & 神戸 (Kōbe))
+- `KIJ` - 新潟 (Niigata)
+- `KKJ` - 北九州・下関 (Kitakyūshū & Shimonoseki)
+- `KMJ` - 熊本 (Kumamoto)
+- `KOJ` - 鹿児島 (Kagoshima)
+- `MYJ` - 松山 (Matsuyama)
+- `NGO` - 名古屋 (Nagoya)
+- `NGS` - 長崎 (Nagasaki)
+- `OKA` - 沖縄 (Okinawa)
+- `OKJ` - 岡山 (Okayama)
+- `SDJ` - 仙台 (Sendai)
+- `SHB` - 根室 (Nemuro)
+- `SPK` - 札幌 (Sapporo)
+- `TAK` - 高松 (Takamatsu)
+- `TOY` - 富山 (Toyama)
+- `TTJ` - 鳥取 (Tottori)
+- `UKB` - 神戸・姫路 (Kōbe & Himeji)
+- `UKY` - 京都 (Kyōto)
+- `WKJ` - 稚内 (Wakkanai)
+
+- **Refreshed with the improvements made in 0.4.11** - Regions boundary overlays are shipped with the maps + driving routes are now loaded in a companion file to ensure compatibility with Railyard `v0.2.10`.
+
+#### Bugfixes
+
+- **Corrected the English romanization of place names across every map.** City, ward, and neighborhood (大字・町丁目) labels now take their readings from an authoritative Japanese address dataset instead of automated character-by-character transliteration, which had misread a large share of names — for example neighborhood avenues reading _-dōri_ (通) that previously showed _-tōri_, and cities such as Miyakonojō (都城) and Kagoshima (鹿児島) that came out mis-transliterated. The corrected readings also flow through to each map's English name and its store listing.
+
 ### 0.4.11 (2026-08-10)
 
 #### New Cities
@@ -73,7 +144,7 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 #### Other Features
 
 - **Regional boundary overlays now ship with the maps.** Maps now include their own municipal (市町村) and neighborhood (大字) boundary data, so the Regions mod can draw administrative regions straight from the installed map with no separate download. This is a packaging addition only; the simulation and its demand modeling are unchanged.
-- **Driving routes now load from a companion file.** The per-trip driving-route lines (the polylines that trace each commute) are no longer included within the main demand data. The newest version of Railyard (0.2.10) will enable loads on demand, keeping the demand data that is required in memory lean and serving a route only when it is shown to the user.
+- **Driving routes now load from a companion file.** The per-trip driving-route lines (the polylines that trace each commute) are no longer included within the main demand data. The newest version of Railyard (`v0.2.10`) will enable loads on demand, keeping the demand data that is required in memory lean and serving a route only when it is shown to the user.
 
 ### 0.4.10 (2026-08-05)
 
