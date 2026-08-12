@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/IZO.zip",
-      "sha256": "cb1e876a8fa0c745af77a02bafe4b0279a4cca983a12b3b73fa062a9941e8613"
+      "sha256": "2fb0397b7661f49d44b30b738bd964d4079bd86e84cd4df15756edc890c820e1"
     },
     {
       "version": "0.4.1",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/IZO.zip",
-      "sha256": "6c9fc2678fbdb03bcf7e7854e7e666caff1cc05b940ec0ad18de9edba4a2369d"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.4.0",
@@ -28,32 +29,36 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/IZO.zip",
-      "sha256": "ae8f060ab707f3532719db331657f24e3c8886e173b8daade1148d0b23f00514"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.3.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-16",
       "changelog": "Added ocean bathymetry, neighborhood labels, and Overture buildings, and made driving-time estimates less optimistic.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/IZO.zip",
-      "sha256": "cf8c28d7db20b484a4b0b4db3e54fd248a1869af89fa04a3afc217723dd75ec5"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
       "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/IZO.zip",
-      "sha256": "e8422ae8ecb89a9152fd1d46a6f9e372268b51e06bc4385ff0c72523599a3d90"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
       "changelog": "Initial release of the Nakaumi map with census-based residents and workers, commute demand, and port, hospital, and school demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/IZO.zip",
-      "sha256": "bfb2e32212e23cbe329dd0c5b28934a2f688ff54ec8fa99c7cbf79eb325ecf3c"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

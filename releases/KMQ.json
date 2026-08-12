@@ -2,14 +2,25 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.1.1",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-08-13",
+      "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/KMQ.zip",
+      "sha256": "8ab9278b7d88e7c3d52244fa5cbfc268c44eacee06450117438d624dc53d18e7"
+    },
+    {
       "version": "0.1.0",
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-08-10",
       "changelog": "Initial release of the Kanazawa map — census-based commute demand and 3D buildings; cultural and attraction demand is not yet fully developed, with a dedicated pass planned.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.11/KMQ.zip",
-      "sha256": "ed765200e993a16b7de7806d9861eac62df0254166730ed495f034209e181576"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

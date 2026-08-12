@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Renamed to Kitakyūshū & Shimonoseki to reflect coverage across the strait, and corrected the English romanization of city and neighborhood names using authoritative reading data.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/KKJ.zip",
-      "sha256": "6d04a020184ae71b7f1c46839d2dcee99a10b3c4deb67d2dba27382527aeec1e"
+      "sha256": "bada76e4d4568a945afdf439d6989a5c35b8fadbfc4656680d7a21277540db8f"
     },
     {
       "version": "0.6.1",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/KKJ.zip",
-      "sha256": "4c4445c14a0e15dd69f8ec173d4fa8b12b5395d24a9e1e3bc80b33e3e1360a6f"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.6.0",
@@ -28,48 +29,54 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/KKJ.zip",
-      "sha256": "5cf092d2a3a2008787301e26545149849974319a689bf12c7644f1648c620596"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.1",
       "game_version": ">=1.3.0",
       "date": "2026-04-21",
       "changelog": "Added military-base demand and expanded special-demand and point seeding for the Ōsaka and Fukuoka maps.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.8/KKJ.zip",
-      "sha256": "53ea1ef1416f93df55408e3d71d04b5b4918a1f862448390d52e1d7a2e159054"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-16",
       "changelog": "Added ocean bathymetry, neighborhood labels, and Overture buildings, and made driving-time estimates less optimistic.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/KKJ.zip",
-      "sha256": "e27f22fa76326ef2ee8aaabea53978836187890cab303d18e97564c075b2fca8"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
       "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/KKJ.zip",
-      "sha256": "15e52094b6544b586ae7852bb5dab514efa68b041c5d7016bae1446d43ae139c"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
       "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/KKJ.zip",
-      "sha256": "d9337220ebf38dcfa07fb4e9f48521199d5c9a4fce49c6588d11901c76a10c34"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
       "changelog": "Initial release of the Kitakyūshū map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/KKJ.zip",
-      "sha256": "9bf190c32dee18a46ec201a0bb06a75a7b81faaa5909572747dd544551770bac"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

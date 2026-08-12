@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/OKA.zip",
-      "sha256": "0768cd30abbdc9d20ea141bebbec78d0bbf3aeb149d1041306f8f9e2c5dea6b0"
+      "sha256": "5d44db563ef5a199236604905b2e1bc31d10261656fd6f1050200eeed8934a77"
     },
     {
       "version": "0.6.1",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/OKA.zip",
-      "sha256": "2c30e6a26e2296decb2291003b3f58a8d022befbfd03dfe2679261f45791572e"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.6.0",
@@ -28,40 +29,45 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
       "changelog": "Full modeling refresh — per-building foundation depth, Global Building Atlas heights, fuller land use, and greatly expanded cultural and entertainment demand; metropolitan boundary widened.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.6/OKA.zip",
-      "sha256": "f7317ad7a84c7fc62bd8f016a82325e37f3af710873d2f78271072679c221cf2"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-18",
       "changelog": "Reworked maps with attraction demand, coastal bathymetry, neighborhood labels, and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.7/OKA.zip",
-      "sha256": "6d073cc121eb6b88f97e98a266140bd64a7bbe7ff5e1a2139eb84708c7ba1d75"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
       "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/OKA.zip",
-      "sha256": "8fd64b957b9fe3521a755a6bdaa8266ec96b3da3306a70e7008f040c252a26d1"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
       "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/OKA.zip",
-      "sha256": "e94d7db5ed41c8a9ee18d10bd8bf4fcd8e69cdc2c2237ccbbb2e9049a92a5af8"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
       "changelog": "Initial release of the Okinawa map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/OKA.zip",
-      "sha256": "35e465e6ed9554625402695093b9d26b90a656704043d9fdedca430f4956bb8e"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

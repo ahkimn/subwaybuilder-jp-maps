@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/MYJ.zip",
-      "sha256": "07a4ff1423f772e82afdf12101d65731ba6dc7808e3968f490499ffa2755f5ff"
+      "sha256": "d394c3455a2b2452fcc2855130e0ce8ad8a9f0c5abcc534785298971dc73f299"
     },
     {
       "version": "0.6.2",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/MYJ.zip",
-      "sha256": "3c68494d5303d7a3b80b2fc4bb1a657a00d1995589352b27eb37af7ae37098a3"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.6.1",
@@ -28,8 +29,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
       "changelog": "Repositioned military and Self-Defense Force installations to precise geocoded locations.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.7/MYJ.zip",
-      "sha256": "1003faa56977ebf07345a7fa6107e6542711d95b5c49a5a9c9f517bbba112757"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.6.0",
@@ -38,40 +40,45 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/MYJ.zip",
-      "sha256": "877202844cb011ce5477f9a77cab902a20e631221050f4a7f5c1262d832a7628"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-18",
       "changelog": "Reworked maps with attraction demand, coastal bathymetry, neighborhood labels, and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.7/MYJ.zip",
-      "sha256": "5f3bcc11939a082f4e4ca9bca6a8fc66b7677e583a021c4959c9f7fbfb8867ed"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
       "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/MYJ.zip",
-      "sha256": "1dfe74acf175a177ab329a029c1a9fbdb8ef5f1b901505151d5aad66a3cd3171"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
       "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/MYJ.zip",
-      "sha256": "fd59a16efcca4478bdbb76b9e0068c8d7045f5be8dff8606d3521fe0680ed579"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
       "changelog": "Initial release of the Matsuyama map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/MYJ.zip",
-      "sha256": "d847f0d09982da320b2f61e737d85ad7ea8110ac36fe5cb1e42a0a463e2b79fe"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

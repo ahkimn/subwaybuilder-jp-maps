@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/GAJ.zip",
-      "sha256": "f15866bd077110f50b6da384de62ccf91ae7d2f9c5e70ff25c99681ace5d24a1"
+      "sha256": "4295377ec4b7fc9c511e0075a1ffa377fabef7c22a04e20cf5c2a8d49af15400"
     },
     {
       "version": "0.5.2",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/GAJ.zip",
-      "sha256": "d96b5ab73585712133eaf4c80ac486fb1e0610184adc89b15944246dcc1b49ea"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.1",
@@ -28,8 +29,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Restored dropped coastal and island neighborhoods, thinned over-drawn building foundations, and back-filled sparse building footprints.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.5/GAJ.zip",
-      "sha256": "389fd698635eb7b4cdb62c796e25e9b3161c27a4af9e82b5ca15a205917a99a4"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.0",
@@ -38,32 +40,36 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-13",
       "changelog": "Added per-building foundation depth, Global Building Atlas heights and 3D buildings, fuller land use, and military demand; widened metropolitan boundaries.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.3/GAJ.zip",
-      "sha256": "5b08a1c27a7d20aa1f1420b5a4d5263f410a9a674c03f51e2146f4f9d7fab2b8"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
       "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/GAJ.zip",
-      "sha256": "88dfc980037a99c7df24079f7c9c362a111725c8d10b66a24bb69f93a9e00e0c"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
       "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/GAJ.zip",
-      "sha256": "3b7a191f1412166e05ba546bfe82f24969b55f9eeff47d5f7dacbd34a89adadc"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
       "changelog": "Initial release of the Yamagata map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/GAJ.zip",
-      "sha256": "2fab1ca359670027c891f4da32bed938c8e2e928f25a7d83c5cec10788d2a728"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

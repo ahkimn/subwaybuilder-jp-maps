@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/FSZ.zip",
-      "sha256": "2e16074b8632f2a214a7c512ed318e3a105952ba2b7f9f5ca30b643159f078fb"
+      "sha256": "3c96cbff8f96a085c2f7c31bb090d16bdb9c3bcbfdf2f927a60d232faeccee1c"
     },
     {
       "version": "0.2.1",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/FSZ.zip",
-      "sha256": "886f983f4f9b67b3f788e69a1e208c71d7f374f440002db4637dfcad83f22e69"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
@@ -28,16 +29,18 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
       "changelog": "Full modeling refresh — per-building foundation depth, Global Building Atlas heights, fuller land use, and greatly expanded cultural and entertainment demand; metropolitan boundary widened.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.6/FSZ.zip",
-      "sha256": "ae6db7c652a20e8abf66e0f2f9e285cd458d175502505547ec8b563db84c6292"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-04-05",
       "changelog": "Includes bathymetric data and cultural attraction special demand",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.3/FSZ.zip",
-      "sha256": "d0a61005a95b165bfc86430ba66a6b3bae40c493069ad1ac136cd8a8bfbdad9a"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

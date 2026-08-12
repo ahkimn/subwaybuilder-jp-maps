@@ -6,10 +6,10 @@
       "min_game_version": ">1.3.0",
       "max_game_version": null,
       "game_version": ">1.3.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative reading data; moved per-trip driving routes to a companion file for a lighter download.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/KHS.zip",
-      "sha256": "490ae9ce0f92a5031a989b823cd0b1db8852ef18d4b3d0b519d50e3d17c02c4a"
+      "sha256": "0b19acb060db9cc5730112734a32d28871b08f912d00eda859761b8a9412089f"
     },
     {
       "version": "0.1.2",
@@ -18,8 +18,9 @@
       "game_version": ">1.3.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly; recomputed map geometry in the map's local projection for accurate shapes and a lighter download.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.9/KHS.zip",
-      "sha256": "ec7ea91ea283f871c475d9d5b3fa1bed54a7e4e6698a73c155a246a889499b3d"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.1",
@@ -28,8 +29,9 @@
       "game_version": ">1.3.0",
       "date": "2026-07-20",
       "changelog": "Restored dropped coastal and island neighborhoods, thinned over-drawn building foundations, and back-filled sparse building footprints.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.5/KHS.zip",
-      "sha256": "6bb79de2f973ec7be670d2a4c478dc8d2d3e7622b16b469df1d4ef8925e0d6a2"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
@@ -38,8 +40,9 @@
       "game_version": ">1.3.0",
       "date": "2026-07-13",
       "changelog": "Initial release of the Keihanshin map built with the full modeling pipeline — per-building foundations, 3D building heights, fuller land use, and a full range of demand points.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.3/KHS.zip",
-      "sha256": "3e3825c2d40c53f5283bbdc3a9e6d2c22810cdea25031b16b26ffbeb1c2b23b2"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

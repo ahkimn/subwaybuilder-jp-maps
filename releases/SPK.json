@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/SPK.zip",
-      "sha256": "d7a4c3c22d0eac2f87f36adebb9c4fcb990eee530b257a9afb0b19b148fd3594"
+      "sha256": "133e5092436d4529bddb54e3046a84a11532043331aa7253041a6834a7c676f9"
     },
     {
       "version": "0.6.2",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/SPK.zip",
-      "sha256": "b14ff13571af940a24929c7f76b2bf820c624f9bd44e2d48cdef32b8757b9302"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.6.1",
@@ -28,8 +29,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
       "changelog": "Repositioned military and Self-Defense Force installations to precise geocoded locations.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.7/SPK.zip",
-      "sha256": "0fcce4fea76054f31bb553d2e95d0b84d8b1023db2409c9476e4befc3166084f"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.6.0",
@@ -38,40 +40,45 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/SPK.zip",
-      "sha256": "af7deb060716eb3720114a317ec1dac6b61f60c567de33b8d56f742153d372b0"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.5.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-18",
       "changelog": "Reworked maps with attraction demand, coastal bathymetry, neighborhood labels, and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.7/SPK.zip",
-      "sha256": "37dfe30c04c658cd66a2d8a8bc7bf25c5b931c34ec60399da5b0381363deafce"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.4.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-23",
       "changelog": "Added university, zoo, aquarium, and botanical-garden demand; rebalanced population and improved point placement.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.0/SPK.zip",
-      "sha256": "12c083d0a42f12d2b4b5db0809d713990ef08fd105c06daea348ef80053e62ae"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.3.0",
       "game_version": ">=1.2.0",
       "date": "2026-03-14",
       "changelog": "Added port and hospital demand, rebalanced special demand, and corrected school-age commute demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.2.0/SPK.zip",
-      "sha256": "30f1534400c12f52c8314a8632f44528e535062311f99abac7948c4d643eb6e4"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
       "game_version": ">=1.0.0",
       "date": "2026-03-09",
       "changelog": "Initial release of the Sapporo map with census-based residents and workers, commute demand, school demand, and neighborhood labels.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.1.3/SPK.zip",
-      "sha256": "be3813fa292cfd15df7f31fde978dca42cae7ce2e2401b440606e9e553dad0c3"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

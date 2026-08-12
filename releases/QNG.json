@@ -2,14 +2,25 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.1.1",
+      "min_game_version": ">=1.0.0",
+      "max_game_version": null,
+      "game_version": ">=1.0.0",
+      "date": "2026-08-13",
+      "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/QNG.zip",
+      "sha256": "9aa23b9e24b0e94b93145813ed5bdf717bc3a3c9620c6574e40732ed5674de66"
+    },
+    {
       "version": "0.1.0",
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
       "date": "2026-08-10",
       "changelog": "Initial release of the Nagano map — census-based commute demand and 3D buildings; cultural and attraction demand is not yet fully developed, with a dedicated pass planned.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.11/QNG.zip",
-      "sha256": "adac039b8f7c5b6d003a10e4fbd519b5487d8baba657a9cfccd44440b82a3fb2"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

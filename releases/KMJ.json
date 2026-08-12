@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/KMJ.zip",
-      "sha256": "6678c948e86980ca89f6bbf838f30041798301647d1047e9ff3d17ad384bdd3e"
+      "sha256": "23ae45c9c88c47d5c12b4f2470c80bc97945aa8825a79ba8245e4520033ae4af"
     },
     {
       "version": "0.2.1",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/KMJ.zip",
-      "sha256": "856cd81a7fb84bf0f67c2fdbb29d017f2fabb5482b00f60298d6f4bc2e0aefc1"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
@@ -28,16 +29,18 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
       "changelog": "Full modeling refresh — per-building foundation depth, Global Building Atlas heights, fuller land use, and greatly expanded cultural and entertainment demand; metropolitan boundary widened.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.6/KMJ.zip",
-      "sha256": "963f2963ca6773d4fcf1f9288acbf1bd0bd576a7fab70c0b8d59c79f69557143"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-16",
       "changelog": "Initial release of the Kumamoto map with census-based residents and workers, commute demand, ocean bathymetry, neighborhood labels, and attraction demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/KMJ.zip",
-      "sha256": "fad85e75da9902b494e5da0880b785598bd0fef2f8fdbdafc8761b5a6d041411"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

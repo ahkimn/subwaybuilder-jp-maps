@@ -6,10 +6,10 @@
       "min_game_version": ">1.3.0",
       "max_game_version": null,
       "game_version": ">1.3.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/SHB.zip",
-      "sha256": "cc42fea3151543992f33a426b29710581112b373fb60c92550f9e743289c3423"
+      "sha256": "5a302788cb85f4f3bf76ff22c23a4e51195bf82ce0449bfd9bd1a3ac8f42f59a"
     },
     {
       "version": "0.2.1",
@@ -18,8 +18,9 @@
       "game_version": ">1.3.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/SHB.zip",
-      "sha256": "97ce1527209ef72cad61ca0f88fa7b82c73f196f66666e38ccbfcf0f37058891"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
@@ -28,24 +29,27 @@
       "game_version": ">1.3.0",
       "date": "2026-06-28",
       "changelog": "Test map update.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.0/SHB.zip",
-      "sha256": "b79f6a58eebef78cb4cfbd6031da40cb1615b63f2bc6ee33432bc3c3a7b5c4d0"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.1",
       "game_version": ">=1.3.0",
       "date": "2026-04-16",
       "changelog": "Added ocean bathymetry, neighborhood labels, and Overture buildings, and made driving-time estimates less optimistic.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/SHB.zip",
-      "sha256": "0d620942544d5513d44fa93a1dd16b834074e3fd09714f149f36978e1e7e3aba"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-04-13",
       "changelog": "Test map.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.5/SHB.zip",
-      "sha256": "2244fca58b52c9cb8d6cf1bc746f2637b8141699fff69f03a3db6cd932a3a938"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

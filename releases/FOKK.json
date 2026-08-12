@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative reading data; moved per-trip driving routes to a companion file for a lighter download.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/FOKK.zip",
-      "sha256": "ef689ea9361b984007a9ea4b6eb190b0eb5089f9e6f1aadb79a663f1e3c39060"
+      "sha256": "ed1da5b81a4f15a65b1bcde484131879d6437ce313b8ec2df40f6e25f480bcbc"
     },
     {
       "version": "0.2.1",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly; recomputed map geometry in the map's local projection for accurate shapes and a lighter download.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.9/FOKK.zip",
-      "sha256": "ff47770a5f97a00f6df21bb70de1165faf5b1e464ff6ad8ccf3ba35271e4a4b1"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
@@ -28,24 +29,27 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/FOKK.zip",
-      "sha256": "35c6a3bca4812cbd51f98eb78c195ba15893eeb7c2067f3d56d4271da8494b10"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.1",
       "game_version": ">=1.3.0",
       "date": "2026-04-21",
       "changelog": "Added military-base demand and expanded special-demand and point seeding for the Ōsaka and Fukuoka maps.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.8/FOKK.zip",
-      "sha256": "e708e28bc95f440ecf1db15539b51d796bf6c6f0b0ccb72ecdac921e99798176"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
       "game_version": ">=1.3.0",
       "date": "2026-04-16",
       "changelog": "Initial release of the Northern Kyūshū map with census-based residents and workers, commute demand, ocean bathymetry, neighborhood labels, and attraction demand.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/FOKK.zip",
-      "sha256": "dcd78e0cfb6ca6cb91a78ac11a52ae9f5a9acb12cedefde5e243cf2eab6f8d4c"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }

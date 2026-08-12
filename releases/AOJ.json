@@ -6,10 +6,10 @@
       "min_game_version": ">=1.0.0",
       "max_game_version": null,
       "game_version": ">=1.0.0",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/AOJ.zip",
-      "sha256": "b032c3b0507c06814b969402f7eb0c1deadad4e7171038c26ce01c93a1867f50"
+      "sha256": "82cd4659b443c51ec70f89f7de7ecf1dcc5831bbb8c399fcddffebbbe8a04c72"
     },
     {
       "version": "0.2.2",
@@ -18,8 +18,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-08-05",
       "changelog": "Reworked commuter-to-workplace matching to reproduce census commute totals exactly and even out block-to-block variation; recomputed map geometry in the map's local projection for a lighter download and wider default view.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.10/AOJ.zip",
-      "sha256": "bff7fa3749d18771fad06b5562631e2aa031e06e59ca54878b21a5dbe3985420"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.1",
@@ -28,8 +29,9 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-27",
       "changelog": "Repositioned military and Self-Defense Force installations to precise geocoded locations.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.7/AOJ.zip",
-      "sha256": "85a948947622f9d16b37783b03eb677b11a2cff099b599b52bc5bf7294201dfd"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.2.0",
@@ -38,24 +40,27 @@
       "game_version": ">=1.0.0",
       "date": "2026-07-20",
       "changelog": "Refreshed maps onto the full modeling pipeline (foundations, bathymetry, 3D heights, land use, military demand); restored dropped coastal and island neighborhoods and corrected on-base resident counts.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.4/AOJ.zip",
-      "sha256": "346364da4e30d174964a7db91e06a2290c5f4c086b5310985f4f3ab1687f6997"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.1",
       "game_version": ">=1.3.0",
       "date": "2026-04-16",
       "changelog": "Added ocean bathymetry, neighborhood labels, and Overture buildings, and made driving-time estimates less optimistic.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.6/AOJ.zip",
-      "sha256": "63a082c07517fd22e0b586cd7990271eecf3cb886d72919de8ecce2197317069"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
       "game_version": ">=1.2.0",
       "date": "2026-04-05",
       "changelog": "Includes bathymetric data and cultural attraction special demand",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.3.3/AOJ.zip",
-      "sha256": "e39d3b5ceaf856d9f32e585c8046bbbe9b72ae584fc1c22ee2c17f98ed11c295"
+      "download": null,
+      "sha256": null,
+      "retired": true
     }
   ]
 }
