@@ -9,7 +9,7 @@
       "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/KCZ.zip",
-      "sha256": "de99902f57482bdbf17ef1da60e6605f5cc6bea289f35477518fb93275a7cd85"
+      "sha256": "03c511ff38aa031ddff1d9a164e615bd86c168888d634e0c2e5e69b566bd23b6"
     },
     {
       "version": "0.6.2",

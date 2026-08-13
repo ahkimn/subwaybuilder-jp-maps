@@ -9,7 +9,7 @@
       "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative reading data; moved per-trip driving routes to a companion file for a lighter download.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/NGO.zip",
-      "sha256": "895998af8e876a5f75dd3d8ff74976eae088b038100714f4012a60857ea7e416"
+      "sha256": "ba88c27a7a7b3d21057089bc9b45598758a70f602bdffa21bba3bd392e820e79"
     },
     {
       "version": "0.2.1",

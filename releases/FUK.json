@@ -9,7 +9,7 @@
       "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/FUK.zip",
-      "sha256": "d322652b0e636c000c5d009c0a8ac78101c21c3b4ad8a0f1f27d3b5d85dbb6cc"
+      "sha256": "0cb9d83c82481d5a46cb24de797dbd47a4b17a6ff771f14d0fbd79e1008a723d"
     },
     {
       "version": "0.6.1",

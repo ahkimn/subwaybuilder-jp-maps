@@ -9,7 +9,7 @@
       "date": "2026-08-13",
       "changelog": "Renamed to Kitakyūshū & Shimonoseki to reflect coverage across the strait, and corrected the English romanization of city and neighborhood names using authoritative reading data.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/KKJ.zip",
-      "sha256": "bada76e4d4568a945afdf439d6989a5c35b8fadbfc4656680d7a21277540db8f"
+      "sha256": "27b1099e094cb6a6fe150e3818f3fa6fb533555f28377935f0c261d4c7d6e718"
     },
     {
       "version": "0.6.1",
