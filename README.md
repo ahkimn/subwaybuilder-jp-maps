@@ -127,11 +127,11 @@ Please raise an issue on this repository, or reach out directly on the pack's de
 - `WKJ` - 稚内 (Wakkanai)
 - `WKY` - 和歌山 (Wakayama)
 
-- **Refreshed with the improvements made in 0.4.11** - Regions boundary overlays are shipped with the maps + driving routes are now loaded in a companion file to ensure compatibility with Railyard `v0.2.10`.
+- **Refreshed with the improvements made in 0.4.11** - For the 33 maps not updated in 0.4.11, Regions boundary overlays are shipped with the maps + driving routes are now loaded in a companion file to ensure compatibility with Railyard `v0.2.10`.
 
 #### Bugfixes
 
-- **Corrected the English romanization of place names across every map.** City, ward, and neighborhood (大字・町丁目) labels now take their readings from an authoritative Japanese address dataset instead of automated character-by-character transliteration, which had misread a large share of names — for example neighborhood avenues reading _-dōri_ (通) that previously showed _-tōri_, and cities such as Miyakonojō (都城) and Kagoshima (鹿児島) that came out mis-transliterated. The corrected readings also flow through to each map's English name and its store listing.
+- **Corrected the English romanization of place names across every map.** City, ward, and neighborhood (大字・町丁目) labels now take their readings from an authoritative Japanese address dataset (where applicable) instead of automated character-by-character transliteration libraries, which mistakenly read a substantial subset of place names. For example neighborhood avenues now correctly read _-dōri_ (通) instead of _-tōri_, and cities such as Kagoshima (鹿児島), which was previously misread as Kakoshima, are also fixed.
 
 ### 0.4.11 (2026-08-10)
 
