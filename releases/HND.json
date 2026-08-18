@@ -2,14 +2,25 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "0.1.2",
+      "min_game_version": ">1.3.0",
+      "max_game_version": null,
+      "game_version": ">1.3.0",
+      "date": "2026-08-19",
+      "changelog": "Fixed water shattering at low zoom, where simplification had fattened narrow streams into slivers far wider than the real watercourse, and rebuilt land use alongside so the layers stay aligned.",
+      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.13/HND.zip",
+      "sha256": "47dfc048c9dadfd0a7b651aac554c4b40097f44a7c224943c51f8968ad5def55"
+    },
+    {
       "version": "0.1.1",
       "min_game_version": ">1.3.0",
       "max_game_version": null,
       "game_version": ">1.3.0",
       "date": "2026-08-13",
       "changelog": "Corrected the English romanization of city and neighborhood names using authoritative Japanese reading data, fixing many names that automated transliteration had misread.",
-      "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.12/HND.zip",
-      "sha256": "4c8599578f2195b417aa914b564b513780529b393e45b5f848b9c82fbf08c7f1"
+      "download": null,
+      "sha256": null,
+      "retired": true
     },
     {
       "version": "0.1.0",
