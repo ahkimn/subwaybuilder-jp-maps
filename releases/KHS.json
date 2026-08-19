@@ -9,7 +9,7 @@
       "date": "2026-08-19",
       "changelog": "Fixed water shattering at low zoom, where simplification had fattened narrow streams into slivers far wider than the real watercourse, and rebuilt land use alongside so the layers stay aligned.",
       "download": "https://github.com/ahkimn/subwaybuilder-jp-maps/releases/download/0.4.13/KHS.zip",
-      "sha256": "d76f539dd12184751aa9cde8e389bd058757c76c0599ff9db52a7a88d92d345e"
+      "sha256": "cddc197d9fbd8fd5396b48c0068528f90943a8426effe9d273011d067920c8fb"
     },
     {
       "version": "0.1.3",
